@@ -1,9 +1,8 @@
-/* eslint-disable */
 import React from 'react';
 import PropTypes from 'prop-types';
-import './template.scss';
+import './menu.scss';
 
-export default class TemplateComponent extends React.Component {
+export default class MenuComponent extends React.Component {
   constructor(props) {
     super(props);
     this.props = props;
@@ -17,5 +16,5 @@ export default class TemplateComponent extends React.Component {
   }
 }
 
-TemplateComponent.propTypes = {
+MenuComponent.propTypes = {
 };

@@ -1,5 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Carousel from './Carousel/CarouselComponent';
+import Events from './Events/EventsComponent';
+import Footer from './Footer/FooterComponent';
 import './home.scss';
 
 export default class HomeComponent extends React.Component {
@@ -9,17 +12,15 @@ export default class HomeComponent extends React.Component {
   }
 
   componentDidMount() {
-    this.props.getTitle();
+    this.props.getHomeInfo();
   }
 
   renderPage() {
     return (
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-sm-12">
-            {this.props.homeState.title}
-          </div>
-        </div>
+      <div>
+        <Carousel sliderImages={this.props.homeState.homeInfo.sliderImages} />
+        <Events eventImages={this.props.homeState.homeInfo.eventImages} />
+        <Footer />
       </div>
     );
   }
@@ -27,13 +28,13 @@ export default class HomeComponent extends React.Component {
   render() {
     return (
       <div>
-        {this.props.homeState.title ? this.renderPage() : ''}
+        {this.props.homeState.homeInfo ? this.renderPage() : ''}
       </div>
     );
   }
 }
 
 HomeComponent.propTypes = {
-  getTitle: PropTypes.func.isRequired,
+  getHomeInfo: PropTypes.func.isRequired,
   homeState: PropTypes.object.isRequired,
 };

@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-starter-kit",
-  "version": "2.0.0",
-  "description": "Starter kit for creating apps with React and Redux",
+  "name": "react-dominos-next",
+  "version": "1.0.0",
+  "description": "dominos china next gate",
   "engines": {
     "npm": ">=3"
   },
@@ -30,9 +30,12 @@
     "react-helmet": "5.2.0",
     "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
     "react-router-redux": "^5.0.0-alpha.9",
+    "react-slick": "^0.22.3",
     "redux": "3.6.0",
-    "redux-thunk": "2.1.0"
+    "redux-thunk": "2.1.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "autoprefixer": "6.5.4",
@@ -58,7 +61,7 @@
     "eslint-plugin-react": "6.8.0",
     "eslint-watch": "2.1.14",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "file-loader": "0.9.0",
+    "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.0.7",
     "identity-obj-proxy": "3.0.0",
     "json-loader": "0.5.4",

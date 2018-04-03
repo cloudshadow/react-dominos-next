@@ -9,7 +9,7 @@ export class HomePage extends React.Component {
   render() {
     return (
       <HomeComponent
-        getTitle={this.props.homeActions.getTitle}
+        getHomeInfo={this.props.homeActions.getHomeInfo}
         homeState={this.props.homeState}
       />
     );

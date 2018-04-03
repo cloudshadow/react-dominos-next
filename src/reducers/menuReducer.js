@@ -1,27 +1,22 @@
 import {
-  GET_HOME_INFO_SUCCESS,
-  GET_HOME_INFO_FAILED
-} from '../actions/homeActions';
+  TEMP
+} from '../actions/menuActions';
 // import objectAssign from 'object-assign';
 
 const initialState = {
-  homeInfo: null,
+  temp: null,
   error: null,
   token: null
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-
-    case GET_HOME_INFO_SUCCESS:
+    case TEMP:
       return {
         ...state,
-        homeInfo: action.homeInfo
-      };
-    case GET_HOME_INFO_FAILED:
-      return {
-        ...state,
-        title: action.error
+        temp: action.temp,
+        error: null,
+        token: action.token
       };
     default:
       return state;
