@@ -11,6 +11,9 @@ import { ConnectedRouter } from 'react-router-redux';
 // import App from './containers/App'; // eslint-disable-line import/no-named-as-default
 import Navbar from './components/Navbar/NavbarComponent';
 import HomePage from './containers/HomePage'; // eslint-disable-line import/no-named-as-default
+import MenuPage from './containers/MenuPage'; // eslint-disable-line import/no-named-as-default
+import Footer from './components/Home/Footer/FooterComponent';
+import NotfoundPage from './containers/NotfoundPage'; // eslint-disable-line import/no-named-as-default
 
 const store = configureStore();
 const history = createHistory();
@@ -24,8 +27,11 @@ render(
         <div className="switch-container">
           <Switch>
             <Route exact path="/" component={HomePage} />
+            <Route path="/menu" component={MenuPage} />
+            <Route component={NotfoundPage} />
           </Switch>
         </div>
+        <Footer />
       </div>
     </ConnectedRouter>
   </Provider>, document.getElementById('app')

@@ -1,0 +1,137 @@
+[
+  {
+    "category": "经典风味",
+    "list": [
+      {
+        "id": 1,
+        "name": "照烧风味牛肉土豆比萨",
+        "image": "http://static-test.dominos.com.cn/000/event.jpg",
+        "promotionInfo": "自取买一送一",
+        "nineInchOriginPrice": 59,
+        "nineInchPromoPrice": 41,
+        "twelveInchOriginPrice": 85,
+        "twelveInchPromoPrice": 59
+      },
+      {
+        "id": 2,
+        "name": "BBQ猪颈肉比萨",
+        "image": "http://static-test.dominos.com.cn/000/event.jpg",
+        "promotionInfo": "自取买一送一",
+        "nineInchOriginPrice": 59,
+        "nineInchPromoPrice": 41,
+        "twelveInchOriginPrice": 85,
+        "twelveInchPromoPrice": 59
+      },
+      {
+        "id": 3,
+        "name": "德式喷香猪肘比萨",
+        "image": "http://static-test.dominos.com.cn/000/event.jpg",
+        "promotionInfo": "自取买一送一",
+        "nineInchOriginPrice": 59,
+        "nineInchPromoPrice": 41,
+        "twelveInchOriginPrice": 85,
+        "twelveInchPromoPrice": 59
+      },
+      {
+        "id": 4,
+        "name": "香烤羊肉比萨",
+        "image": "http://static-test.dominos.com.cn/000/event.jpg",
+        "promotionInfo": "自取买一送一",
+        "nineInchOriginPrice": 59,
+        "nineInchPromoPrice": 41,
+        "twelveInchOriginPrice": 85,
+        "twelveInchPromoPrice": 59
+      }
+    ]
+  },
+  {
+    "category": "甄选尊享",
+    "list": [
+      {
+        "id": 1,
+        "name": "大吉大利比萨",
+        "image": "http://static-test.dominos.com.cn/000/event.jpg",
+        "promotionInfo": "自取买一送一",
+        "nineInchOriginPrice": 69,
+        "nineInchPromoPrice": 48,
+        "twelveInchOriginPrice": 95,
+        "twelveInchPromoPrice": 66
+      },
+      {
+        "id": 2,
+        "name": "尊享牛油果芝士鸡比萨",
+        "image": "http://static-test.dominos.com.cn/000/event.jpg",
+        "promotionInfo": "自取买一送一",
+        "nineInchOriginPrice": 69,
+        "nineInchPromoPrice": 48,
+        "twelveInchOriginPrice": 95,
+        "twelveInchPromoPrice": 66
+      },
+      {
+        "id": 3,
+        "name": "照烧风味章鱼虾仁比萨",
+        "image": "http://static-test.dominos.com.cn/000/event.jpg",
+        "promotionInfo": "自取买一送一",
+        "nineInchOriginPrice": 69,
+        "nineInchPromoPrice": 48,
+        "twelveInchOriginPrice": 95,
+        "twelveInchPromoPrice": 66
+      },
+      {
+        "id": 4,
+        "name": "黑松露风味牛肉比萨",
+        "image": "http://static-test.dominos.com.cn/000/event.jpg",
+        "promotionInfo": "自取买一送一",
+        "nineInchOriginPrice": 69,
+        "nineInchPromoPrice": 48,
+        "twelveInchOriginPrice": 95,
+        "twelveInchPromoPrice": 66
+      }
+    ]
+  },
+  {
+    "category": "物超所值",
+    "list": [
+      {
+        "id": 1,
+        "name": "酥香嫩鱼比萨",
+        "image": "http://static-test.dominos.com.cn/000/event.jpg",
+        "promotionInfo": "自取买一送一",
+        "nineInchOriginPrice": 45,
+        "nineInchPromoPrice": 31,
+        "twelveInchOriginPrice": 71,
+        "twelveInchPromoPrice": 49
+      },
+      {
+        "id": 2,
+        "name": "浓香脆鸡菠萝比萨",
+        "image": "http://static-test.dominos.com.cn/000/event.jpg",
+        "promotionInfo": "自取买一送一",
+        "nineInchOriginPrice": 45,
+        "nineInchPromoPrice": 31,
+        "twelveInchOriginPrice": 71,
+        "twelveInchPromoPrice": 49
+      },
+      {
+        "id": 3,
+        "name": "浓香芝士比萨",
+        "image": "http://static-test.dominos.com.cn/000/event.jpg",
+        "promotionInfo": "自取买一送一",
+        "nineInchOriginPrice": 45,
+        "nineInchPromoPrice": 31,
+        "twelveInchOriginPrice": 71,
+        "twelveInchPromoPrice": 49
+      },
+      {
+        "id": 4,
+        "name": "美国风情土豆培根比萨",
+        "image": "http://static-test.dominos.com.cn/000/event.jpg",
+        "promotionInfo": "自取买一送一",
+        "nineInchOriginPrice": 45,
+        "nineInchPromoPrice": 31,
+        "twelveInchOriginPrice": 71,
+        "twelveInchPromoPrice": 49
+      }
+    ]
+  }
+]

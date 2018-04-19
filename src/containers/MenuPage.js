@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as menuActions from '../actions/menuActions';
 import MenuComponent from '../components/Menu/MenuComponent';
@@ -7,7 +8,10 @@ import MenuComponent from '../components/Menu/MenuComponent';
 export class MenuPage extends React.Component {
   render() {
     return (
-      <MenuComponent />
+      <MenuComponent
+        menuState={this.props.menuState}
+        getPizzaMenu={this.props.menuActions.getPizzaMenu}
+      />
     );
   }
 }

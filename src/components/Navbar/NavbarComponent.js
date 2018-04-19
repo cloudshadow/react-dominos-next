@@ -13,6 +13,14 @@ export default class NavbarComponent extends React.Component {
   componentDidMount() {
   }
 
+  activeMenu(pathname) {
+    if (pathname === '/') {
+      return window.location.pathname === pathname ? 'nav-item active' : 'nav-item';
+    } else {
+      return window.location.pathname.includes(pathname) ? 'nav-item active' : 'nav-item';
+    }
+  }
+
   renderPage() {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -26,23 +34,23 @@ export default class NavbarComponent extends React.Component {
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
-              <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+            <li className={this.activeMenu('/')}>
+              <Link className="nav-link" to="/">Home</Link>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Menu</a>
+            <li className={this.activeMenu('/menu')}>
+              <Link className="nav-link" to="/menu/pizza">Menu</Link>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Promotion</a>
+            <li className={this.activeMenu('/promotion')}>
+              <Link className="nav-link" to="/promotion">Promotion</Link>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Story</a>
+            <li className={this.activeMenu('/story')}>
+              <Link className="nav-link" to="/story">Story</Link>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Stores</a>
+            <li className={this.activeMenu('/stores')}>
+              <Link className="nav-link" to="/stores">Stores</Link>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Member</a>
+            <li className={this.activeMenu('/member')}>
+              <Link className="nav-link" to="/member">Member</Link>
             </li>
           </ul>
           <ul className="navbar-nav">

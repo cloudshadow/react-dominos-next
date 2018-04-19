@@ -1,0 +1,22 @@
+.pizza-container{
+  padding-top: 40px;
+  .category-name{
+    color: #999;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    // border-bottom: 2px solid #999;
+  }
+  .pizza-box{
+    .promo-text{
+      color: red;
+    }
+    .btn-cart {
+      margin-top: .75rem;
+    }
+  }
+  
+  // .card-pizza{
+  //   padding: 0;
+
+  // }
+}

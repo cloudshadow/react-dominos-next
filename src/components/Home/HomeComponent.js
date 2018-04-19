@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Carousel from './Carousel/CarouselComponent';
 import Events from './Events/EventsComponent';
-import Footer from './Footer/FooterComponent';
 import './home.scss';
 
 export default class HomeComponent extends React.Component {
@@ -20,7 +19,6 @@ export default class HomeComponent extends React.Component {
       <div>
         <Carousel sliderImages={this.props.homeState.homeInfo.sliderImages} />
         <Events eventImages={this.props.homeState.homeInfo.eventImages} />
-        <Footer />
       </div>
     );
   }

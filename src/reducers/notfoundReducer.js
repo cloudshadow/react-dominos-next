@@ -1,27 +1,22 @@
 import {
-  GET_PIZZA_MENU_SUCCESS,
-  GET_PIZZA_MENU_FAILED
-} from '../actions/menuActions';
+  TEMP
+} from '../actions/notfoundActions';
 // import objectAssign from 'object-assign';
 
 const initialState = {
-  pizzaMenu: null,
+  temp: null,
   error: null,
   token: null
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case GET_PIZZA_MENU_SUCCESS:
+    case TEMP:
       return {
         ...state,
-        pizzaMenu: action.pizzaMenu,
+        temp: action.temp,
+        error: null,
         token: action.token
-      };
-    case GET_PIZZA_MENU_FAILED:
-      return {
-        ...state,
-        error: action.error
       };
     default:
       return state;
