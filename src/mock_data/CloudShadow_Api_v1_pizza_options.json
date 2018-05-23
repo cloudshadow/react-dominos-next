@@ -1,0 +1,228 @@
+{
+  "msize": {
+    "crusts": {
+      "jdsp": {
+        "name": "经典手拍",
+        "image": "http://static-test.dominos.com.cn/000/crust.png",
+        "price": 0
+      },
+      "qqbc": {
+        "name": "轻巧薄脆",
+        "image": "http://static-test.dominos.com.cn/000/crust.png",
+        "price": 0
+      },
+      "sxkp": {
+        "name": "香酥烤盘风味",
+        "image": "http://static-test.dominos.com.cn/000/crust.png",
+        "price": 10
+      },
+      "zsjb": {
+        "name": "经典芝士卷边",
+        "image": "http://static-test.dominos.com.cn/000/crust.png",
+        "price": 10
+      },
+      "zxjb": {
+        "name": "双层芝心卷边",
+        "image": "http://static-test.dominos.com.cn/000/crust.png",
+        "price": 20
+      }
+    },
+    "sources": {
+      "xndh": {
+        "name": "香浓蛋黄风味酱",
+        "image": "http://static-test.dominos.com.cn/000/source.png",
+        "price": 0
+      },
+      "bbq": {
+        "name": "BBQ烧烤酱",
+        "image": "http://static-test.dominos.com.cn/000/source.png",
+        "price": 0
+      },
+      "jdfq": {
+        "name": "经典番茄比萨酱",
+        "image": "http://static-test.dominos.com.cn/000/source.png",
+        "price": 0
+      }
+    },
+    "toppings": {
+      "zs": {
+        "name": "芝士",
+        "image": "http://static-test.dominos.com.cn/000/cheese.png",
+        "price": 8
+      },
+      "pg": {
+        "name": "培根",
+        "image": "http://static-test.dominos.com.cn/000/cheese.png",
+        "price": 8
+      },
+      "yc": {
+        "name": "洋葱",
+        "image": "http://static-test.dominos.com.cn/000/cheese.png",
+        "price": 8
+      },
+      "ysxcd": {
+        "name": "意式香肠丁",
+        "image": "http://static-test.dominos.com.cn/000/cheese.png",
+        "price": 8
+      },
+      "dszz": {
+        "name": "德式猪肘",
+        "image": "http://static-test.dominos.com.cn/000/cheese.png",
+        "price": 8
+      },
+      "xnjk": {
+        "name": "香浓鸡块",
+        "image": "http://static-test.dominos.com.cn/000/cheese.png",
+        "price": 8
+      },
+      "fq": {
+        "name": "番茄",
+        "image": "http://static-test.dominos.com.cn/000/cheese.png",
+        "price": 8
+      },
+      "jqy": {
+        "name": "金枪鱼",
+        "image": "http://static-test.dominos.com.cn/000/cheese.png",
+        "price": 8
+      },
+      "bl": {
+        "name": "菠萝",
+        "image": "http://static-test.dominos.com.cn/000/cheese.png",
+        "price": 8
+      },
+      "qj": {
+        "name": "青椒",
+        "image": "http://static-test.dominos.com.cn/000/cheese.png",
+        "price": 8
+      },
+      "ht": {
+        "name": "火腿",
+        "image": "http://static-test.dominos.com.cn/000/cheese.png",
+        "price": 8
+      },
+      "mg": {
+        "name": "蘑菇",
+        "image": "http://static-test.dominos.com.cn/000/cheese.png",
+        "price": 8
+      },
+      "msxcp": {
+        "name": "美式香肠片",
+        "image": "http://static-test.dominos.com.cn/000/cheese.png",
+        "price": 8
+      }
+    }
+  },
+  "lsize": {
+    "crusts": {
+      "jdsp": {
+        "name": "经典手拍",
+        "image": "http://static-test.dominos.com.cn/000/crust.png",
+        "price": 0
+      },
+      "qqbc": {
+        "name": "轻巧薄脆",
+        "image": "http://static-test.dominos.com.cn/000/crust.png",
+        "price": 0
+      },
+      "sxkps": {
+        "name": "香酥烤盘风味",
+        "image": "http://static-test.dominos.com.cn/000/crust.png",
+        "price": 20
+      },
+      "zsjb": {
+        "name": "经典芝士卷边",
+        "image": "http://static-test.dominos.com.cn/000/crust.png",
+        "price": 20
+      },
+      "zxjb": {
+        "name": "双层芝心卷边",
+        "image": "http://static-test.dominos.com.cn/000/crust.png",
+        "price": 40
+      }
+    },
+    "sources": {
+      "xndh": {
+        "name": "香浓蛋黄风味酱",
+        "image": "http://static-test.dominos.com.cn/000/source.png",
+        "price": 0
+      },
+      "bbq": {
+        "name": "BBQ烧烤酱",
+        "image": "http://static-test.dominos.com.cn/000/source.png",
+        "price": 0
+      },
+      "jdfq": {
+        "name": "经典番茄比萨酱",
+        "image": "http://static-test.dominos.com.cn/000/source.png",
+        "price": 0
+      }
+    },
+    "toppings": {
+      "zs": {
+        "name": "芝士",
+        "image": "http://static-test.dominos.com.cn/000/cheese.png",
+        "price": 18
+      },
+      "pg": {
+        "name": "培根",
+        "image": "http://static-test.dominos.com.cn/000/cheese.png",
+        "price": 18
+      },
+      "yc": {
+        "name": "洋葱",
+        "image": "http://static-test.dominos.com.cn/000/cheese.png",
+        "price": 18
+      },
+      "ysxcd": {
+        "name": "意式香肠丁",
+        "image": "http://static-test.dominos.com.cn/000/cheese.png",
+        "price": 18
+      },
+      "dszz": {
+        "name": "德式猪肘",
+        "image": "http://static-test.dominos.com.cn/000/cheese.png",
+        "price": 18
+      },
+      "xnjk": {
+        "name": "香浓鸡块",
+        "image": "http://static-test.dominos.com.cn/000/cheese.png",
+        "price": 18
+      },
+      "fq": {
+        "name": "番茄",
+        "image": "http://static-test.dominos.com.cn/000/cheese.png",
+        "price": 18
+      },
+      "jqy": {
+        "name": "金枪鱼",
+        "image": "http://static-test.dominos.com.cn/000/cheese.png",
+        "price": 18
+      },
+      "bl": {
+        "name": "菠萝",
+        "image": "http://static-test.dominos.com.cn/000/cheese.png",
+        "price": 18
+      },
+      "qj": {
+        "name": "青椒",
+        "image": "http://static-test.dominos.com.cn/000/cheese.png",
+        "price": 18
+      },
+      "ht": {
+        "name": "火腿",
+        "image": "http://static-test.dominos.com.cn/000/cheese.png",
+        "price": 18
+      },
+      "mg": {
+        "name": "蘑菇",
+        "image": "http://static-test.dominos.com.cn/000/cheese.png",
+        "price": 18
+      },
+      "msxcp": {
+        "name": "美式香肠片",
+        "image": "http://static-test.dominos.com.cn/000/cheese.png",
+        "price": 18
+      }
+    }
+  }
+}

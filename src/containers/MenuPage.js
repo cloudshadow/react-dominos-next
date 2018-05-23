@@ -11,6 +11,10 @@ export class MenuPage extends React.Component {
       <MenuComponent
         menuState={this.props.menuState}
         getPizzaMenu={this.props.menuActions.getPizzaMenu}
+        getPizzaOptions={this.props.menuActions.getPizzaOptions}
+        getPizzaDetail={this.props.menuActions.getPizzaDetail}
+        controlPizzaDialog={this.props.menuActions.controlPizzaDialog}
+        getRiceMenu={this.props.menuActions.getRiceMenu}
       />
     );
   }

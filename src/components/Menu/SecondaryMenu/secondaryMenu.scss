@@ -13,11 +13,11 @@
     height: 40px;
     left: 0;
     filter: blur(10px);
-    background: inherit; 
+    // background: inherit; 
     background-color: rgba(255, 255, 255, 1);
     // padding: 10px;
     text-align: center;
-    // box-shadow: inset 0 0 0 200px rgba(255,255,255,0.3);
+    box-shadow: inset 0 0 0 200px rgba(255,255,255,0.3);
   }
   .menus {
     position: fixed;

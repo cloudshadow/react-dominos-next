@@ -14,8 +14,8 @@ export class NotfoundPage extends React.Component {
 }
 
 NotfoundPage.propTypes = {
-  notfoundActions: PropTypes.object.isRequired,
-  notfoundState: PropTypes.object.isRequired,
+  // notfoundActions: PropTypes.object.isRequired,
+  // notfoundState: PropTypes.object.isRequired,
 };
 
 function mapStateToProps(state) {
