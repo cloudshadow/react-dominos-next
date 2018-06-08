@@ -18,7 +18,12 @@
     "default":{
       "crusts": ["jdsp"],
       "sources": ["xndh"],
-      "toppings": [ "zs", "pg", "yc", "ysxcd" ]
+      "toppings": [ 
+        {"name":"zs","number":1,"limit":1}, 
+        {"name":"pg","number":1,"limit":1}, 
+        {"name":"yc","number":1,"limit":1}, 
+        {"name":"ysxcd","number":1,"limit":1}
+      ]
     }
   },
   "lsize": {
@@ -31,7 +36,12 @@
     "default":{
       "crusts": ["jdsp"],
       "sources": ["xndh"],
-      "toppings": [ "zs", "pg", "yc", "ysxcd" ]
+      "toppings": [ 
+        {"name":"zs","number":1,"limit":1}, 
+        {"name":"pg","number":1,"limit":1}, 
+        {"name":"yc","number":1,"limit":1}, 
+        {"name":"ysxcd","number":1,"limit":1}
+      ]
     }
   }
 }
