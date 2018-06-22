@@ -15,6 +15,11 @@ export class MenuPage extends React.Component {
         getPizzaDetail={this.props.menuActions.getPizzaDetail}
         controlPizzaDialog={this.props.menuActions.controlPizzaDialog}
         getRiceMenu={this.props.menuActions.getRiceMenu}
+        getSideMenu={this.props.menuActions.getSideMenu}
+        getDessertMenu={this.props.menuActions.getDessertMenu}
+        getDrinkMenu={this.props.menuActions.getDrinkMenu}
+        getSoupMenu={this.props.menuActions.getSoupMenu}
+        getComboMenu={this.props.menuActions.getComboMenu}
       />
     );
   }

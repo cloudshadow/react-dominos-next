@@ -15,13 +15,15 @@ export default class PizzaDialogComponent extends React.Component {
         pizzaCrust: this.props.pizza[this.props.pizza.sizes[0]].crusts[0],
         crustPrice: this.props.pizzaOptions[this.props.pizza.sizes[0]].crusts[this.props.pizza[this.props.pizza.sizes[0]].crusts[0]].price
       },
-      currentDefaultToppings: {
-
-      },
-      currentAdditionalToppings: {
-
-      }
+      currentDefaultToppings: this.props.pizza[this.props.pizza.sizes[0]].default.toppings,
+      currentAdditionalToppings: this.props.pizza[this.props.pizza.sizes[0]].toppings,
+      currentAdditionalToppingsPrice: 0,
     };
+    this.calculateAdditionalToppingsPrice = this.calculateAdditionalToppingsPrice.bind(this);
+  }
+
+  handleCloseClick() {
+    this.props.controlPizzaDialog();
   }
 
   handleSizeClick(pizzaSize, sizePrice) {
@@ -37,18 +39,44 @@ export default class PizzaDialogComponent extends React.Component {
     });
   }
 
-  handleDefaultToppingsClick() {
-
+  handleDefaultToppingsClick(topping, number) {
+    topping.number += number;
+    topping.number = topping.number < 0 ? 0 : topping.number;
+    topping.number = topping.number > topping.limit ? topping.limit : topping.number;
+    this.setState({ currentDefaultToppings: this.updateTopping(this.state.currentDefaultToppings, topping) });
   }
 
-  handleAdditionalToppingsClick() {
+  handleAdditionalToppingsClick(topping, number) {
+    topping.number += number;
+    topping.number = topping.number < 0 ? 0 : topping.number;
+    topping.number = topping.number > topping.limit ? topping.limit : topping.number;
+    this.setState({ currentAdditionalToppings: this.updateTopping(this.state.currentAdditionalToppings, topping) });
+    this.calculateAdditionalToppingsPrice();
+  }
 
+  handleAddCartClick() {
+    this.props.controlPizzaDialog();
+  }
+
+  updateTopping(toppingList, changedTopping) {
+    let targetIndex = toppingList.findIndex(topping => topping.name === changedTopping.name);
+    targetIndex < 0 ? toppingList.push(changedTopping) : toppingList.splice(targetIndex, 1, changedTopping);
+    return toppingList;
+  }
+
+  calculateAdditionalToppingsPrice() {
+    let currentAdditionalToppingsPrice = 0;
+    this.state.currentAdditionalToppings.forEach(topping => {
+      currentAdditionalToppingsPrice += (this.props.pizzaOptions[this.state.currentSize.pizzaSize].toppings[topping.name].price * topping.number);
+    });
+    this.setState({ currentAdditionalToppingsPrice });
   }
 
   render() {
     return (
-      <div className={(this.props.showPizzaDialog ? '' : 'pizza-dialog-hide ') + 'pizza-dialog-container'}>
+      <div className="pizza-dialog-container">
         <div className="pizza-dialog container-fluid">
+          <span className="oi oi-x" onClick={this.handleCloseClick.bind(this)} />
           <div className="row">
             <div className="col-4">
               <div className="row">
@@ -61,8 +89,12 @@ export default class PizzaDialogComponent extends React.Component {
                 <div className="col-12 desc">
                   {this.props.pizza.desc}
                 </div>
-                <div className="col-12 price">
-                  <span className="name">价格</span><span className="value">￥{this.state.currentSize.sizePrice + this.state.currentCrust.crustPrice}</span>
+                <div className="col-6 price">
+                  <span className="name">价格</span>
+                  <span className="value">￥{this.state.currentSize.sizePrice + this.state.currentCrust.crustPrice + this.state.currentAdditionalToppingsPrice}</span>
+                </div>
+                <div className="col-6 cart">
+                  <button className="btn btn-success" onClick={this.handleAddCartClick.bind(this)}><span className="oi oi-cart" /> Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -109,13 +141,15 @@ export default class PizzaDialogComponent extends React.Component {
                 <div className="col-12 title">
                   Default Topping
                 </div>
-                {this.props.pizza[this.state.currentSize.pizzaSize].default.toppings.map(pizzaTopping => {
+                {this.state.currentDefaultToppings.map(pizzaTopping => {
                   return (
                     <div className="col-2 box" key={pizzaTopping.name}>
                       <div className="container">
                         <img src={this.props.pizzaOptions[this.state.currentSize.pizzaSize].toppings[pizzaTopping.name].image} />
                         <span className="topping-text">{this.props.pizzaOptions[this.state.currentSize.pizzaSize].toppings[pizzaTopping.name].name}</span>
-                        <span className="oi oi-plus" /><span className="count">{pizzaTopping.number}</span><span className="oi oi-minus" />
+                        <span className="oi oi-plus" onClick={this.handleDefaultToppingsClick.bind(this, pizzaTopping, 1)} />
+                        <span className="count">{pizzaTopping.number}</span>
+                        <span className="oi oi-minus" onClick={this.handleDefaultToppingsClick.bind(this, pizzaTopping, -1)} />
                       </div>
                     </div>
                   );
@@ -125,13 +159,15 @@ export default class PizzaDialogComponent extends React.Component {
                 <div className="col-12 title">
                   Topping
                 </div>
-                {this.props.pizza[this.state.currentSize.pizzaSize].toppings.map(pizzaTopping => {
+                {this.state.currentAdditionalToppings.map(pizzaTopping => {
                   return (
-                    <div className="col-2 box" key={pizzaTopping}>
+                    <div className="col-2 box" key={pizzaTopping.name}>
                       <div className="container">
-                        <img src={this.props.pizzaOptions[this.state.currentSize.pizzaSize].toppings[pizzaTopping].image} />
-                        <span className="topping-text">{this.props.pizzaOptions[this.state.currentSize.pizzaSize].toppings[pizzaTopping].name}</span>
-                        <span className="oi oi-plus" /><span className="count">0</span><span className="oi oi-minus" />
+                        <img src={this.props.pizzaOptions[this.state.currentSize.pizzaSize].toppings[pizzaTopping.name].image} />
+                        <span className="topping-text">{this.props.pizzaOptions[this.state.currentSize.pizzaSize].toppings[pizzaTopping.name].name}</span>
+                        <span className="oi oi-plus" onClick={this.handleAdditionalToppingsClick.bind(this, pizzaTopping, 1)} />
+                        <span className="count">{pizzaTopping.number}</span>
+                        <span className="oi oi-minus" onClick={this.handleAdditionalToppingsClick.bind(this, pizzaTopping, -1)} />
                       </div>
                     </div>
                   );
@@ -148,5 +184,5 @@ export default class PizzaDialogComponent extends React.Component {
 PizzaDialogComponent.propTypes = {
   pizza: PropTypes.object.isRequired,
   pizzaOptions: PropTypes.object.isRequired,
-  showPizzaDialog: PropTypes.bool.isRequired,
+  controlPizzaDialog: PropTypes.func.isRequired,
 };

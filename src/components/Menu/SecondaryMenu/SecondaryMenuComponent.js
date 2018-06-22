@@ -16,7 +16,7 @@ export default class SecondaryMenuComponent extends React.Component {
         <div className="menus">
           <Link to="/menu/pizza"><span className="menu">Pizza</span></Link>
           <Link to="/menu/rice"><span className="menu">Rice</span></Link>
-          <Link to="/menu/food"><span className="menu">SideFood</span></Link>
+          <Link to="/menu/sidefood"><span className="menu">SideFood</span></Link>
           <Link to="/menu/dessert"><span className="menu">Dessert</span></Link>
           <Link to="/menu/drink"><span className="menu">Drink</span></Link>
           <Link to="/menu/soup"><span className="menu">Soup</span></Link>

@@ -8,6 +8,16 @@ import {
   CONTROL_PIZZA_DIALOG,
   GET_RICE_MENU_SUCCESS,
   GET_RICE_MENU_FAILED,
+  GET_SIDE_MENU_SUCCESS,
+  GET_SIDE_MENU_FAILED,
+  GET_DESSERT_MENU_SUCCESS,
+  GET_DESSERT_MENU_FAILED,
+  GET_DRINK_MENU_SUCCESS,
+  GET_DRINK_MENU_FAILED,
+  GET_SOUP_MENU_SUCCESS,
+  GET_SOUP_MENU_FAILED,
+  GET_COMBO_MENU_SUCCESS,
+  GET_COMBO_MENU_FAILED
 } from '../actions/menuActions';
 // import objectAssign from 'object-assign';
 
@@ -17,6 +27,11 @@ const initialState = {
   pizzaDetail: null,
   showPizzaDialog: false,
   riceMenu: null,
+  sideMenu: null,
+  dessertMenu: null,
+  drinkMenu: null,
+  soupMenu: null,
+  comboMenu: null,
   error: null,
   token: null
 };
@@ -59,7 +74,7 @@ export default (state = initialState, action) => {
     case CONTROL_PIZZA_DIALOG:
       return {
         ...state,
-        showPizzaDialog: true,
+        showPizzaDialog: !state.showPizzaDialog,
       };
     case GET_RICE_MENU_SUCCESS:
       return {
@@ -68,6 +83,61 @@ export default (state = initialState, action) => {
         token: action.token
       };
     case GET_RICE_MENU_FAILED:
+      return {
+        ...state,
+        error: action.error
+      };
+    case GET_SIDE_MENU_SUCCESS:
+      return {
+        ...state,
+        sideMenu: action.sideMenu,
+        token: action.token
+      };
+    case GET_SIDE_MENU_FAILED:
+      return {
+        ...state,
+        error: action.error
+      };
+    case GET_DESSERT_MENU_SUCCESS:
+      return {
+        ...state,
+        dessertMenu: action.dessertMenu,
+        token: action.token
+      };
+    case GET_DESSERT_MENU_FAILED:
+      return {
+        ...state,
+        error: action.error
+      };
+    case GET_DRINK_MENU_SUCCESS:
+      return {
+        ...state,
+        drinkMenu: action.drinkMenu,
+        token: action.token
+      };
+    case GET_DRINK_MENU_FAILED:
+      return {
+        ...state,
+        error: action.error
+      };
+    case GET_SOUP_MENU_SUCCESS:
+      return {
+        ...state,
+        soupMenu: action.soupMenu,
+        token: action.token
+      };
+    case GET_SOUP_MENU_FAILED:
+      return {
+        ...state,
+        error: action.error
+      };
+    case GET_COMBO_MENU_SUCCESS:
+      return {
+        ...state,
+        comboMenu: action.comboMenu,
+        token: action.token
+      };
+    case GET_COMBO_MENU_FAILED:
       return {
         ...state,
         error: action.error

@@ -70,11 +70,11 @@ export default class PizzaComponent extends React.Component {
           this.props.menuState.pizzaMenu && this.props.menuState.pizzaOptions ? this.renderPizzaList() : ''
         }
         {
-          this.props.menuState.pizzaDetail && this.props.menuState.pizzaOptions ?
+          this.props.menuState.pizzaDetail && this.props.menuState.pizzaOptions && this.props.menuState.showPizzaDialog ?
             <PizzaDialogComponent
               pizzaOptions={this.props.menuState.pizzaOptions}
               pizza={this.props.menuState.pizzaDetail}
-              showPizzaDialog={this.props.menuState.showPizzaDialog}
+              controlPizzaDialog={this.props.controlPizzaDialog}
             />
             : ''
         }
