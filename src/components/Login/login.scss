@@ -1,0 +1,44 @@
+.login-container{
+  background-image: url("http://static-test.dominos.com.cn/000/login.jpg");
+  background-size:cover;
+  height: 100vh;
+  // width: 100vw;
+  .login-wrapper {
+    margin-top: 10vh;
+    padding: 0;
+    border-radius: 4px;
+    // padding: 20px;
+    // height:80px;
+    background-color: #343a40;
+    .login-tab, .register-tab {
+      width: 50%;
+      text-align: center;
+      background-color: #202529;
+      color: #aaa;
+    }
+    .login-tab {
+      border-top-left-radius: 4px;
+    }
+    .register-tab {
+      border-top-right-radius: 4px;
+    }
+   .active {
+      border: 1px solid #343a40;
+      background-color: #343a40;
+      color: #fff;
+    }
+    
+    .form-wrapper {
+      padding: 20px 20px 5px 20px;
+      label {
+        color: #fff;
+      }
+      .btn-wrapper {
+        margin-top: 40px;
+      }
+    }
+    .hide{
+      display: none;
+    }
+  }
+}

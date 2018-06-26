@@ -42,7 +42,6 @@ export default (state = initialState, action) => {
       return {
         ...state,
         pizzaMenu: action.pizzaMenu,
-        token: action.token
       };
     case GET_PIZZA_MENU_FAILED:
       return {
@@ -53,7 +52,6 @@ export default (state = initialState, action) => {
       return {
         ...state,
         pizzaOptions: action.pizzaOptions,
-        token: action.token
       };
     case GET_PIZZA_OPTIONS_FAILED:
       return {
@@ -64,7 +62,6 @@ export default (state = initialState, action) => {
       return {
         ...state,
         pizzaDetail: action.pizzaDetail,
-        token: action.token
       };
     case GET_PIZZA_DETAIL_FAILED:
       return {
@@ -80,7 +77,6 @@ export default (state = initialState, action) => {
       return {
         ...state,
         riceMenu: action.riceMenu,
-        token: action.token
       };
     case GET_RICE_MENU_FAILED:
       return {
@@ -91,7 +87,6 @@ export default (state = initialState, action) => {
       return {
         ...state,
         sideMenu: action.sideMenu,
-        token: action.token
       };
     case GET_SIDE_MENU_FAILED:
       return {
@@ -102,7 +97,6 @@ export default (state = initialState, action) => {
       return {
         ...state,
         dessertMenu: action.dessertMenu,
-        token: action.token
       };
     case GET_DESSERT_MENU_FAILED:
       return {
@@ -113,7 +107,6 @@ export default (state = initialState, action) => {
       return {
         ...state,
         drinkMenu: action.drinkMenu,
-        token: action.token
       };
     case GET_DRINK_MENU_FAILED:
       return {
@@ -124,7 +117,6 @@ export default (state = initialState, action) => {
       return {
         ...state,
         soupMenu: action.soupMenu,
-        token: action.token
       };
     case GET_SOUP_MENU_FAILED:
       return {
@@ -135,7 +127,6 @@ export default (state = initialState, action) => {
       return {
         ...state,
         comboMenu: action.comboMenu,
-        token: action.token
       };
     case GET_COMBO_MENU_FAILED:
       return {

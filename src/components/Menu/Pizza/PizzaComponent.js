@@ -41,7 +41,7 @@ export default class PizzaComponent extends React.Component {
                   pizzaList.list.map(pizza => {
                     return (
                       <div key={pizza.id} className="col-3">
-                        <div className="card pizza-box">
+                        <div className="card item-box">
                           <img className="card-img-top" src={pizza.image} />
                           <div className="card-body">
                             <h5 className="card-title">{pizza.name}</h5>

@@ -1,0 +1,10 @@
+{
+  "id":1,
+  "name":"Cloud",
+  "sex":"male",
+  "birthday":"1980-01-01",
+  "phone":"130123456789",
+  "email":"cloudshadow.hjy@gmail.com",
+  "memberPoints": 2000,
+  "expiredMemberPoints": 1000
+}

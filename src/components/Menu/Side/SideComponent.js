@@ -15,7 +15,7 @@ export default class SideComponent extends React.Component {
     this.props.getSideMenu();
   }
 
-  rendersideList() {
+  renderSideList() {
     return (
       <div>
         {
@@ -55,7 +55,7 @@ export default class SideComponent extends React.Component {
     return (
       <div className="container-fluid side-container">
         {
-          this.props.menuState.sideMenu ? this.rendersideList() : ''
+          this.props.menuState.sideMenu ? this.renderSideList() : ''
         }
       </div>
     );

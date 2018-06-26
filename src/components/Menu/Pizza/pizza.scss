@@ -1,4 +1,5 @@
 .pizza-container{
+  min-height: 700px;
   padding-top: 40px;
   .category-name{
     color: #999;
@@ -6,7 +7,12 @@
     padding-bottom: 10px;
     // border-bottom: 2px solid #999;
   }
-  .pizza-box{
+  .item-box{
+    margin-top: 20px;
+    .card-title{
+      height: 60px;
+      line-height: 30px;
+    }
     .promo-text{
       height: 1.5rem;
       span {

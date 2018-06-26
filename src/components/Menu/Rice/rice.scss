@@ -1,4 +1,5 @@
 .rice-container{
+  min-height: 700px;
   padding-top: 40px;
   .category-name{
     color: #999;
@@ -7,6 +8,10 @@
   }
   .item-box{
     margin-top: 20px;
+    .card-title{
+      height: 60px;
+      line-height: 30px;
+    }
     .promo-text{
       height: 1.5rem;
       span {

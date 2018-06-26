@@ -1,3 +1,37 @@
-// .soup{
-//   color: red;
-// }
+.soup-container{
+  min-height: 700px;
+  padding-top: 40px;
+  .category-name{
+    color: #999;
+    padding-top: 10px;
+    // border-bottom: 2px solid #999;
+  }
+  .item-box{
+    margin-top: 20px;
+    .card-title{
+      height: 60px;
+      line-height: 30px;
+    }
+    .promo-text{
+      height: 1.5rem;
+      span {
+        color: #fff;
+        background-color: #e4393c;
+        padding: 1px 5px 1px 5px; 
+        border-radius: 3px;
+      }
+    }
+    .price{
+      color: #e4393c;
+      .expired-price{
+        font-size: .8rem;
+        text-decoration: line-through;
+        color: #999;
+      }
+    }
+    
+    .btn-cart {
+      margin-top: .75rem;
+    }
+  }
+}

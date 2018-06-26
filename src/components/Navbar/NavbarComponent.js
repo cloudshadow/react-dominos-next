@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import './navbar.scss';
 
@@ -11,6 +11,7 @@ export default class NavbarComponent extends React.Component {
   }
 
   componentDidMount() {
+    !this.props.authState.user && localStorage.user ? this.props.reloadAuth() : '';
   }
 
   activeMenu(pathname) {
@@ -43,12 +44,14 @@ export default class NavbarComponent extends React.Component {
             <li className={this.activeMenu('/promotion')}>
               <Link className="nav-link" to="/promotion">Promotion</Link>
             </li>
+            {/*
             <li className={this.activeMenu('/story')}>
               <Link className="nav-link" to="/story">Story</Link>
             </li>
             <li className={this.activeMenu('/stores')}>
               <Link className="nav-link" to="/stores">Stores</Link>
             </li>
+            */}
             <li className={this.activeMenu('/member')}>
               <Link className="nav-link" to="/member">Member</Link>
             </li>
@@ -57,8 +60,17 @@ export default class NavbarComponent extends React.Component {
             <li className="nav-item">
               <a className="nav-link" href="#"><span className="oi oi-cart" /></a>
             </li>
+            {/*
             <li className="nav-item">
-              <a className="nav-link" href="#">Join / Login</a>
+              <Link className="nav-link" to="/join">Login</Link>
+            </li>
+            
+            <span className="nav-link">/</span>
+            */}
+            <li className="nav-item">
+              {
+                this.props.authState.user ? <Link className="nav-link" to="/member">{this.props.authState.user.name}</Link> : <Link className="nav-link" to="/login">Login</Link>
+              }
             </li>
           </ul>
         </div>
@@ -76,6 +88,6 @@ export default class NavbarComponent extends React.Component {
 }
 
 NavbarComponent.propTypes = {
-  // getTitle: PropTypes.func.isRequired,
-  // homeState: PropTypes.object.isRequired,
+  authState: PropTypes.object.isRequired,
+  reloadAuth: PropTypes.func.isRequired,
 };
