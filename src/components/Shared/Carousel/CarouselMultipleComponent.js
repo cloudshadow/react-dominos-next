@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import './slick.scss';
 import './slick-theme.scss';
@@ -13,28 +12,25 @@ export default class CarouselComponent extends React.Component {
     this.settings = {
       arrows: false,
       autoplay: true,
-      autoplaySpeed: 3500,
+      autoplaySpeed: 5000,
       dots: true,
       infinite: true,
-      speed: 1500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
+      // speed: 2500,
+      slidesToShow: this.props.number,
+      slidesToScroll: this.props.number,
       touchMove: false,
     };
   }
 
-  // handleClick(link) {
-  //   console.log('1111');
-  //   push(link);
-  // }
-  //onClick={() => this.handleClick(item.link)}
-  // e.preventDefault()
-
   render() {
     return (
       <Slider {...this.settings}>
-        {this.props.sliderImages.map(
-          item => <div className="slider-item" key={item.id}><Link to={item.link} ><img className="slider-image" src={item.url} /></Link></div>
+        {this.props.suggestionItems.map(
+          item =>
+            <div className="slider-mutil-item" key={item.id}>
+              <img className="slider-image" src={item.image} />
+              <button className="slider-btn">Add to Cart</button>
+            </div>
         )}
       </Slider>
     );
@@ -42,5 +38,6 @@ export default class CarouselComponent extends React.Component {
 }
 
 CarouselComponent.propTypes = {
-  sliderImages: PropTypes.array.isRequired,
+  suggestionItems: PropTypes.array.isRequired,
+  number: PropTypes.number.isRequired,
 };

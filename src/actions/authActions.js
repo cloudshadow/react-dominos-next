@@ -6,8 +6,6 @@ import history from '../utils/history';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 export const LOGIN_FAILED = 'LOGIN_FAILED';
 export function login(email, password) {
-  console.log(email);
-  console.log(password);
   return dispatch => {
     axios.get(urlHelper.t('v1/login'), {
       // axios.post(urlHelper.t('login'), {
@@ -60,7 +58,7 @@ export const RELOAD_AUTH = 'RELOAD_AUTH';
 export function reloadAuth() {
   return dispatch => {
     const user = JSON.parse(localStorage.user);
-    user ? dispatch({ type: RELOAD_AUTH, user }) : dispatch(push('/login'));
+    user ? dispatch({ type: RELOAD_AUTH, user }) : history.push('/login');
   };
 }
 

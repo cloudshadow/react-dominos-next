@@ -1,0 +1,27 @@
+// .carousel{
+//   color: red;
+// }
+// .slider-image{
+//   // width: 100vw;
+// }
+
+.slider-item {
+  cursor: pointer;
+}
+
+.slider-mutil-item {
+  cursor: pointer;
+  width: 25vw;
+  padding: 5px;
+  .slider-image{
+    width: 100%;
+    border-radius: 4px;
+  }
+  .slider-btn{
+    background-color: #0085ff;
+    width: 100%;
+    color: #fff;
+    border-radius: 4px;
+    padding: 5px;
+  }
+}

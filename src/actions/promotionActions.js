@@ -1,7 +1,7 @@
 import 'es6-promise/auto'; //import es6-promise for ie
 import axios from 'axios';
 import urlHelper from '../utils/urlHelper';
-import { push } from 'react-router-redux';
+import history from '../utils/history';
 
 export const TEMP = 'TEMP';
 
@@ -14,7 +14,7 @@ export function getPromotions() {
       dispatch({ type: GET_PROMOTION_SUCCESS, promotions });
     }).catch(error => {
       dispatch({ type: GET_PROMOTION_FAILED, error });
-      dispatch(push('/error'));
+      history.push('/error');
     });
   };
 }

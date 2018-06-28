@@ -15,4 +15,22 @@
   .logo-text-blue {
     color: #0076b3;
   }
+  .sign-out-btn{
+    display: block;
+    background-color: #343a40;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: .8rem;
+    color: #fff;
+    padding: 2px 5px;
+  }
+  .cart-count {
+    display: inline-block;
+    margin-left: 5px;
+    padding: 0 5px;
+    border-radius: 10px;
+    text-align: center;
+    // background-color: #e1002a;
+    color: #e1002a;
+  }
 }

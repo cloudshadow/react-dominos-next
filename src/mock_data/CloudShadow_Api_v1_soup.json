@@ -3,30 +3,34 @@
     "category": "汤类",
     "list": [
       {
-        "id": 1,
+        "id": 6001,
         "name": "新西兰风情豌豆香肠浓汤11111",
+        "type": "soup",
         "image": "http://static-test.dominos.com.cn/000/soup1.jpg",
         "promotionInfo": "",
         "originPrice": 12
       },
       {
-        "id": 2,
+        "id": 6002,
         "name": "黑松露菌菇汤",
+        "type": "soup",
         "image": "http://static-test.dominos.com.cn/000/soup1.jpg",
         "promotionInfo": "20% Off",
         "originPrice": 14,
         "promoPrice": 11
       },
       {
-        "id": 3,
+        "id": 6003,
         "name": "奶油蘑菇汤",
+        "type": "soup",
         "image": "http://static-test.dominos.com.cn/000/soup2.png",
         "promotionInfo": "",
         "originPrice": 12
       },
       {
-        "id": 4,
+        "id": 6004,
         "name": "冬阴功浓汤",
+        "type": "soup",
         "image": "http://static-test.dominos.com.cn/000/soup2.png",
         "promotionInfo": "",
         "originPrice": 20

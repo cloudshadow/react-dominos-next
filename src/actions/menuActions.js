@@ -1,7 +1,7 @@
 import 'es6-promise/auto'; //import es6-promise for ie
 import axios from 'axios';
 import urlHelper from '../utils/urlHelper';
-import { push } from 'react-router-redux';
+import history from '../utils/history';
 
 export const GET_PIZZA_MENU_SUCCESS = 'GET_PIZZA_MENU_SUCCESS';
 export const GET_PIZZA_MENU_FAILED = 'GET_PIZZA_MENU_FAILED';
@@ -12,7 +12,7 @@ export function getPizzaMenu() {
       dispatch({ type: GET_PIZZA_MENU_SUCCESS, pizzaMenu });
     }).catch(error => {
       dispatch({ type: GET_PIZZA_MENU_FAILED, error });
-      dispatch(push('/error'));
+      // history.push('/error');
     });
   };
 }
@@ -26,7 +26,7 @@ export function getPizzaOptions() {
       dispatch({ type: GET_PIZZA_OPTIONS_SUCCESS, pizzaOptions });
     }).catch(error => {
       dispatch({ type: GET_PIZZA_OPTIONS_FAILED, error });
-      dispatch(push('/error'));
+      // history.push('/error');
     });
   };
 }
@@ -40,7 +40,7 @@ export function getPizzaDetail(id) {
       dispatch({ type: GET_PIZZA_DETAIL_SUCCESS, pizzaDetail });
     }).catch(error => {
       dispatch({ type: GET_PIZZA_DETAIL_FAILED, error });
-      dispatch(push('/error'));
+      // history.push('/error');
     });
   };
 }
@@ -61,7 +61,7 @@ export function getRiceMenu() {
       dispatch({ type: GET_RICE_MENU_SUCCESS, riceMenu });
     }).catch(error => {
       dispatch({ type: GET_RICE_MENU_FAILED, error });
-      dispatch(push('/error'));
+      // history.push('/error');
     });
   };
 }
@@ -75,7 +75,7 @@ export function getSideMenu() {
       dispatch({ type: GET_SIDE_MENU_SUCCESS, sideMenu });
     }).catch(error => {
       dispatch({ type: GET_SIDE_MENU_FAILED, error });
-      dispatch(push('/error'));
+      // history.push('/error');
     });
   };
 }
@@ -89,7 +89,7 @@ export function getDessertMenu() {
       dispatch({ type: GET_DESSERT_MENU_SUCCESS, dessertMenu });
     }).catch(error => {
       dispatch({ type: GET_DESSERT_MENU_FAILED, error });
-      dispatch(push('/error'));
+      // history.push('/error');
     });
   };
 }
@@ -103,7 +103,7 @@ export function getDrinkMenu() {
       dispatch({ type: GET_DRINK_MENU_SUCCESS, drinkMenu });
     }).catch(error => {
       dispatch({ type: GET_DRINK_MENU_FAILED, error });
-      dispatch(push('/error'));
+      history.push('/error');
     });
   };
 }
@@ -117,7 +117,7 @@ export function getSoupMenu() {
       dispatch({ type: GET_SOUP_MENU_SUCCESS, soupMenu });
     }).catch(error => {
       dispatch({ type: GET_SOUP_MENU_FAILED, error });
-      dispatch(push('/error'));
+      // history.push('/error');
     });
   };
 }
@@ -131,7 +131,7 @@ export function getComboMenu() {
       dispatch({ type: GET_COMBO_MENU_SUCCESS, comboMenu });
     }).catch(error => {
       dispatch({ type: GET_COMBO_MENU_FAILED, error });
-      dispatch(push('/error'));
+      // history.push('/error');
     });
   };
 }

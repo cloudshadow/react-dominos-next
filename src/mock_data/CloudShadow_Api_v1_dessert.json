@@ -3,37 +3,42 @@
     "category": "甜品类",
     "list": [
       {
-        "id": 1,
+        "id": 4001,
         "name": "香酥苹果派",
+        "type": "dessert",
         "image": "http://static-test.dominos.com.cn/000/dessert1.jpg",
         "promotionInfo": "",
         "originPrice": 12
       },
       {
-        "id": 2,
+        "id": 4002,
         "name": "醇香芝士塔",
+        "type": "dessert",
         "image": "http://static-test.dominos.com.cn/000/dessert1.jpg",
         "promotionInfo": "20% Off",
         "originPrice": 14,
         "promoPrice": 11
       },
       {
-        "id": 3,
+        "id": 4003,
         "name": "招牌蛋挞",
+        "type": "dessert",
         "image": "http://static-test.dominos.com.cn/000/dessert1.jpg",
         "promotionInfo": "",
         "originPrice": 12
       },
       {
-        "id": 4,
+        "id": 4004,
         "name": "招牌蛋挞礼盒",
+        "type": "dessert",
         "image": "http://static-test.dominos.com.cn/000/dessert2.png",
         "promotionInfo": "",
         "originPrice": 20
       },
       {
-        "id": 5,
+        "id": 4005,
         "name": "巧克力熔浆蛋糕",
+        "type": "dessert",
         "image": "http://static-test.dominos.com.cn/000/dessert2.png",
         "promotionInfo": "",
         "originPrice": 16

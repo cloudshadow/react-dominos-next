@@ -75,6 +75,7 @@ export default class PizzaComponent extends React.Component {
               pizzaOptions={this.props.menuState.pizzaOptions}
               pizza={this.props.menuState.pizzaDetail}
               controlPizzaDialog={this.props.controlPizzaDialog}
+              addItem={this.props.addItem}
             />
             : ''
         }
@@ -90,4 +91,5 @@ PizzaComponent.propTypes = {
   getPizzaOptions: PropTypes.func.isRequired,
   getPizzaDetail: PropTypes.func.isRequired,
   controlPizzaDialog: PropTypes.func.isRequired,
+  addItem: PropTypes.func.isRequired,
 };

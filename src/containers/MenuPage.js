@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as menuActions from '../actions/menuActions';
+import * as cartActions from '../actions/cartActions';
 import MenuComponent from '../components/Menu/MenuComponent';
 
 export class MenuPage extends React.Component {
@@ -20,6 +21,7 @@ export class MenuPage extends React.Component {
         getDrinkMenu={this.props.menuActions.getDrinkMenu}
         getSoupMenu={this.props.menuActions.getSoupMenu}
         getComboMenu={this.props.menuActions.getComboMenu}
+        addItem={this.props.cartActions.addItem}
       />
     );
   }
@@ -28,17 +30,21 @@ export class MenuPage extends React.Component {
 MenuPage.propTypes = {
   menuActions: PropTypes.object.isRequired,
   menuState: PropTypes.object.isRequired,
+  cartActions: PropTypes.object.isRequired,
+  cartState: PropTypes.object.isRequired,
 };
 
 function mapStateToProps(state) {
   return {
     menuState: state.menuState,
+    cartState: state.cartState,
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    menuActions: bindActionCreators(menuActions, dispatch)
+    menuActions: bindActionCreators(menuActions, dispatch),
+    cartActions: bindActionCreators(cartActions, dispatch)
   };
 }
 

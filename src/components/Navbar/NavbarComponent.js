@@ -8,6 +8,9 @@ export default class NavbarComponent extends React.Component {
     super(props);
     this.props = props;
     this.logo = require('../../assets/images/logo.png');
+    this.state = {
+      dropDownShow: false
+    };
   }
 
   componentDidMount() {
@@ -20,6 +23,16 @@ export default class NavbarComponent extends React.Component {
     } else {
       return window.location.pathname.includes(pathname) ? 'nav-item active' : 'nav-item';
     }
+  }
+
+  handleDropDownClick() {
+    this.setState({
+      dropDownShow: !this.state.dropDownShow
+    });
+  }
+
+  handleSignOutClick() {
+    this.props.logout();
   }
 
   renderPage() {
@@ -58,20 +71,29 @@ export default class NavbarComponent extends React.Component {
           </ul>
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link" href="#"><span className="oi oi-cart" /></a>
+              <Link className="nav-link" to="/cart">
+                {console.log(this.props.cartState.items)}
+                <span className="oi oi-cart" />
+                <span className="cart-count">{this.props.cartState.items && this.props.cartState.items.length > 0 ? this.props.cartState.items.length : ''}</span>
+              </Link>
             </li>
-            {/*
-            <li className="nav-item">
-              <Link className="nav-link" to="/join">Login</Link>
-            </li>
-            
-            <span className="nav-link">/</span>
-            */}
-            <li className="nav-item">
-              {
-                this.props.authState.user ? <Link className="nav-link" to="/member">{this.props.authState.user.name}</Link> : <Link className="nav-link" to="/login">Login</Link>
-              }
-            </li>
+            {
+              this.props.authState.user
+                ?
+                <li className={'nav-item dropdown ' + (this.state.dropDownShow ? 'show' : '')}>
+                  <a className="nav-link dropdown-toggle" href="javascript:;" onClick={this.handleDropDownClick.bind(this)} role="button" aria-haspopup="true" aria-expanded={this.state.dropDownShow ? 'true' : 'false'}>
+                    {this.props.authState.user.name}
+                  </a>
+                  <div className={'dropdown-menu dropdown-menu-right ' + (this.state.dropDownShow ? 'show' : '')} onClick={this.handleDropDownClick.bind(this)} aria-labelledby="navbarDropdown">
+                    <Link className="dropdown-item" to="/member">Member</Link>
+                    <a className="dropdown-item" href="javascript:;" onClick={this.handleSignOutClick.bind(this)}>Sign Out</a>
+                  </div>
+                </li>
+                :
+                <li className="nav-item">
+                  <Link className="nav-link" to="/login">Login</Link>
+                </li>
+            }
           </ul>
         </div>
       </nav>
@@ -89,5 +111,7 @@ export default class NavbarComponent extends React.Component {
 
 NavbarComponent.propTypes = {
   authState: PropTypes.object.isRequired,
+  cartState: PropTypes.object.isRequired,
   reloadAuth: PropTypes.func.isRequired,
+  logout: PropTypes.func.isRequired,
 };

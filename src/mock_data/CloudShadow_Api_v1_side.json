@@ -3,61 +3,69 @@
     "category": "小食类",
     "list": [
       {
-        "id": 1,
+        "id": 3001,
         "name": "单份烤翅（奥尔良风味）",
+        "type": "sidefood",
         "image": "http://static-test.dominos.com.cn/000/side1.png",
         "promotionInfo": "",
         "originPrice": 26
       },
       {
-        "id": 2,
+        "id": 3002,
         "name": "烤翅拼盘",
+        "type": "sidefood",
         "image": "http://static-test.dominos.com.cn/000/side1.png",
         "promotionInfo": "35% Off",
         "originPrice": 45,
         "promoPrice": 30
       },
       {
-        "id": 3,
+        "id": 3003,
         "name": "阳光蔬菜色拉",
+        "type": "sidefood",
         "image": "http://static-test.dominos.com.cn/000/side1.png",
         "promotionInfo": "35% Off",
         "originPrice": 12,
         "promoPrice": 9
       },
       {
-        "id": 4,
+        "id": 3004,
         "name": "酥嫩狭鳕鱼棒",
+        "type": "sidefood",
         "image": "http://static-test.dominos.com.cn/000/side1.png",
         "promotionInfo": "",
         "originPrice": 18
       },
       {
-        "id": 5,
+        "id": 3005,
         "name": "海陆拼盘",
+        "type": "sidefood",
         "image": "http://static-test.dominos.com.cn/000/side2.jpg",
         "promotionInfo": "",
         "originPrice": 45
       },
       {
-        "id": 6,
+        "id": 3006,
         "name": "脆嫩烤虾仁",
+        "type": "sidefood",
         "image": "http://static-test.dominos.com.cn/000/side2.jpg",
         "promotionInfo": "35% Off",
         "originPrice": 18,
         "promoPrice": 13
       },
       {
-        "id": 7,
+        "id": 3007,
         "name": "葱香烤薯饼",
+        "type": "sidefood",
         "image": "http://static-test.dominos.com.cn/000/side2.jpg",
         "promotionInfo": "35% Off",
         "originPrice": 12,
         "promoPrice": 8
       },
       {
-        "id": 8,
+        "id": 3008,
         "name": "酥香薯角",
+        "type": "sidefood",
         "image": "http://static-test.dominos.com.cn/000/side2.jpg",
         "promotionInfo": "",
         "originPrice": 12

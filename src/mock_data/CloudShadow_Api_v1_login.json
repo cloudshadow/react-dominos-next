@@ -6,5 +6,10 @@
   "phone":"130123456789",
   "email":"cloudshadow.hjy@gmail.com",
   "memberPoints": 2000,
-  "expiredMemberPoints": 1000
+  "expiredMemberPoints": 1000,
+  "cart": {
+    "items": [
+
+    ]
+  }
 }

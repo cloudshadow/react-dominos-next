@@ -3,31 +3,35 @@
     "category": "意面类",
     "list": [
       {
-        "id": 1,
+        "id": 2001,
         "name": "培根白汁海鲜意面",
+        "type": "rice",
         "image": "http://static-test.dominos.com.cn/000/noodle.jpg",
         "promotionInfo": "",
         "originPrice": 28
       },
       {
-        "id": 2,
+        "id": 2002,
         "name": "罗勒培根面",
+        "type": "rice",
         "image": "http://static-test.dominos.com.cn/000/noodle.jpg",
         "promotionInfo": "35% Off",
         "originPrice": 28,
         "promoPrice": 18
       },
       {
-        "id": 3,
+        "id": 2003,
         "name": "意大利风情肉酱面",
+        "type": "rice",
         "image": "http://static-test.dominos.com.cn/000/noodle.jpg",
         "promotionInfo": "35% Off",
         "originPrice": 28,
         "promoPrice": 18
       },
       {
-        "id": 4,
+        "id": 2004,
         "name": "椰香咖喱鸡肉意面",
+        "type": "rice",
         "image": "http://static-test.dominos.com.cn/000/noodle.jpg",
         "promotionInfo": "",
         "originPrice": 28
@@ -38,32 +42,36 @@
     "category": "焗饭类",
     "list": [
       {
-        "id": 1,
+        "id": 2011,
         "name": "咖喱牛腩焗饭",
+        "type": "rice",
         "image": "http://static-test.dominos.com.cn/000/rice.png",
         "promotionInfo": "35% Off",
         "originPrice": 28,
         "promoPrice": 18
       },
       {
-        "id": 2,
+        "id": 2012,
         "name": "奶香鸡肉焗饭",
+        "type": "rice",
         "image": "http://static-test.dominos.com.cn/000/rice.png",
         "promotionInfo": "35% Off",
         "originPrice": 28,
         "promoPrice": 18
       },
       {
-        "id": 3,
+        "id": 2013,
         "name": "珍味五菇焗饭",
+        "type": "rice",
         "image": "http://static-test.dominos.com.cn/000/rice.png",
         "promotionInfo": "35% Off",
         "originPrice": 28,
         "promoPrice": 18
       },
       {
-        "id": 4,
+        "id": 2014,
         "name": "鱿鱼虾仁海鲜焗饭",
+        "type": "rice",
         "image": "http://static-test.dominos.com.cn/000/rice.png",
         "promotionInfo": "",
         "originPrice": 28

@@ -1,7 +1,7 @@
 import 'es6-promise/auto'; //import es6-promise for ie
 import axios from 'axios';
 import urlHelper from '../utils/urlHelper';
-import { push } from 'react-router-redux';
+import history from '../utils/history';
 
 // export const GET_HOME_TITLE = 'GET_HOME_TITLE';
 // // example of a thunk using the redux-thunk middleware
@@ -23,7 +23,7 @@ export function getHomeInfo() {
       dispatch({ type: GET_HOME_INFO_SUCCESS, homeInfo });
     }).catch(error => {
       dispatch({ type: GET_HOME_INFO_FAILED, error });
-      dispatch(push('/error'));
+      history.push('/error');
     });
   };
 }

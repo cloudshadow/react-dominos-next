@@ -29,42 +29,49 @@ export default class MenuComponent extends React.Component {
               getPizzaOptions={this.props.getPizzaOptions}
               getPizzaDetail={this.props.getPizzaDetail}
               controlPizzaDialog={this.props.controlPizzaDialog}
+              addItem={this.props.addItem}
             />}
           />
           <Route path="/menu/rice" render={() =>
             <RiceComponent
               menuState={this.props.menuState}
               getRiceMenu={this.props.getRiceMenu}
+              addItem={this.props.addItem}
             />}
           />
           <Route path="/menu/sidefood" render={() =>
             <SideComponent
               menuState={this.props.menuState}
               getSideMenu={this.props.getSideMenu}
+              addItem={this.props.addItem}
             />}
           />
           <Route path="/menu/dessert" render={() =>
             <DessertComponent
               menuState={this.props.menuState}
               getDessertMenu={this.props.getDessertMenu}
+              addItem={this.props.addItem}
             />}
           />
           <Route path="/menu/drink" render={() =>
             <DrinkComponent
               menuState={this.props.menuState}
               getDrinkMenu={this.props.getDrinkMenu}
+              addItem={this.props.addItem}
             />}
           />
           <Route path="/menu/soup" render={() =>
             <SoupComponent
               menuState={this.props.menuState}
               getSoupMenu={this.props.getSoupMenu}
+              addItem={this.props.addItem}
             />}
           />
           <Route path="/menu/combo" render={() =>
             <ComboComponent
               menuState={this.props.menuState}
               getComboMenu={this.props.getComboMenu}
+              addItem={this.props.addItem}
             />}
           />
         </Switch>
@@ -85,4 +92,5 @@ MenuComponent.propTypes = {
   getDrinkMenu: PropTypes.func.isRequired,
   getSoupMenu: PropTypes.func.isRequired,
   getComboMenu: PropTypes.func.isRequired,
+  addItem: PropTypes.func.isRequired,
 };

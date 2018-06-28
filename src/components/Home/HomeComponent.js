@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Carousel from './Carousel/CarouselComponent';
+import Carousel from '../Shared/Carousel/CarouselSingleComponent';
 import Events from './Events/EventsComponent';
 import './home.scss';
 

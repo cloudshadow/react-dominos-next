@@ -55,6 +55,18 @@ export default class PizzaDialogComponent extends React.Component {
   }
 
   handleAddCartClick() {
+    this.props.addItem({
+      id: this.props.pizza.id,
+      t: new Date().getTime(),
+      type: 'pizza',
+      image: this.props.pizza.image,
+      size: this.state.currentSize,
+      crust: this.state.currentCrust,
+      defaultToppings: this.state.currentDefaultToppings,
+      additionalToppings: this.state.additionalToppings,
+      price: (this.state.currentSize.sizePrice + this.state.currentCrust.crustPrice + this.state.currentAdditionalToppingsPrice),
+      number: 1,
+    });
     this.props.controlPizzaDialog();
   }
 
@@ -185,4 +197,5 @@ PizzaDialogComponent.propTypes = {
   pizza: PropTypes.object.isRequired,
   pizzaOptions: PropTypes.object.isRequired,
   controlPizzaDialog: PropTypes.func.isRequired,
+  addItem: PropTypes.func.isRequired,
 };

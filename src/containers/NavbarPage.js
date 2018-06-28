@@ -12,6 +12,7 @@ export class NavbarPage extends React.Component {
         authState={this.props.authState}
         reloadAuth={this.props.authActions.reloadAuth}
         logout={this.props.authActions.logout}
+        cartState={this.props.cartState}
       />
     );
   }
@@ -20,11 +21,13 @@ export class NavbarPage extends React.Component {
 NavbarPage.propTypes = {
   authActions: PropTypes.object.isRequired,
   authState: PropTypes.object.isRequired,
+  cartState: PropTypes.object.isRequired,
 };
 
 function mapStateToProps(state) {
   return {
     authState: state.authState,
+    cartState: state.cartState,
   };
 }
 
