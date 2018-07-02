@@ -8,6 +8,7 @@
 
 ## Function
 | Function        | Status        | Remark
+| --------------- | ------------- | ------------------- |
 | Home            | Finished      |
 | Menu - Pizza    | Finished      |
 | Menu - Rice     | Part      | Remaining add cart function
