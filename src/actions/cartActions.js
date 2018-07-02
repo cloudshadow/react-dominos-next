@@ -31,8 +31,9 @@ export function addItem(item) {
     axios.get(urlHelper.t('v1/cartitems'), { item }).then(response => {
 
       // ==============code for test begin==============
+      console.log('in add cart')
       let items = localCartForTest(item, 'add');
-      dispatch({ type: DELETE_ITEM_SUCCESS, items });
+      dispatch({ type: ADD_ITEM_SUCCESS, items });
       // ==============code for test end==============
 
       // const { data: items } = response;
@@ -53,7 +54,7 @@ export function updateCart(item) {
 
       // ==============code for test begin==============
       let items = localCartForTest(item, 'update');
-      dispatch({ type: DELETE_ITEM_SUCCESS, items });
+      dispatch({ type: UPDATE_CART_SUCCESS, items });
       // ==============code for test end==============
 
       // const { data: items } = response;
@@ -91,7 +92,7 @@ export const CLEAN_CART_FAILED = 'CLEAN_CART_FAILED';
 export function cleanCart() {
   return dispatch => {
     // axios.delete(urlHelper.t('v1/cart')).then(response => {
-    axios.get(urlHelper.t('v1/cart')).then(response => {
+    axios.get(urlHelper.t('v1/cartitems')).then(response => {
 
       // ==============code for test begin==============
       localStorage.removeItem('cart');

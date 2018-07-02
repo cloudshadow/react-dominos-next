@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import objectAssign from 'object-assign';
 import './pizzaDialog.scss';
 
 export default class PizzaDialogComponent extends React.Component {
@@ -15,8 +16,8 @@ export default class PizzaDialogComponent extends React.Component {
         pizzaCrust: this.props.pizza[this.props.pizza.sizes[0]].crusts[0],
         crustPrice: this.props.pizzaOptions[this.props.pizza.sizes[0]].crusts[this.props.pizza[this.props.pizza.sizes[0]].crusts[0]].price
       },
-      currentDefaultToppings: this.props.pizza[this.props.pizza.sizes[0]].default.toppings,
-      currentAdditionalToppings: this.props.pizza[this.props.pizza.sizes[0]].toppings,
+      currentDefaultToppings: objectAssign([], this.props.pizza[this.props.pizza.sizes[0]].default.toppings),
+      currentAdditionalToppings: objectAssign([], this.props.pizza[this.props.pizza.sizes[0]].toppings),
       currentAdditionalToppingsPrice: 0,
     };
     this.calculateAdditionalToppingsPrice = this.calculateAdditionalToppingsPrice.bind(this);
@@ -30,6 +31,8 @@ export default class PizzaDialogComponent extends React.Component {
     this.setState({
       currentSize: { pizzaSize, sizePrice },
       currentCrust: { pizzaCrust: this.props.pizza[pizzaSize].crusts[0], crustPrice: this.props.pizzaOptions[pizzaSize].crusts[this.props.pizza[pizzaSize].crusts[0]].price },
+      currentDefaultToppings: objectAssign([], this.props.pizza[pizzaSize].default.toppings),
+      currentAdditionalToppings: objectAssign([], this.props.pizza[pizzaSize].toppings),
     });
   }
 
@@ -39,31 +42,37 @@ export default class PizzaDialogComponent extends React.Component {
     });
   }
 
-  handleDefaultToppingsClick(topping, number) {
+  handleDefaultToppingsClick(changedTopping, number) {
+    let topping = objectAssign({}, changedTopping);
     topping.number += number;
     topping.number = topping.number < 0 ? 0 : topping.number;
     topping.number = topping.number > topping.limit ? topping.limit : topping.number;
     this.setState({ currentDefaultToppings: this.updateTopping(this.state.currentDefaultToppings, topping) });
+
   }
 
-  handleAdditionalToppingsClick(topping, number) {
+  handleAdditionalToppingsClick(changedTopping, number) {
+    let topping = objectAssign({}, changedTopping);
     topping.number += number;
     topping.number = topping.number < 0 ? 0 : topping.number;
     topping.number = topping.number > topping.limit ? topping.limit : topping.number;
     this.setState({ currentAdditionalToppings: this.updateTopping(this.state.currentAdditionalToppings, topping) });
     this.calculateAdditionalToppingsPrice();
+    // console.log(this.props.pizza.msize.toppings);
   }
 
   handleAddCartClick() {
+    // console.log(this.props.pizza.msize.toppings);
     this.props.addItem({
       id: this.props.pizza.id,
       t: new Date().getTime(),
+      name: this.props.pizza.name,
       type: 'pizza',
       image: this.props.pizza.image,
       size: this.state.currentSize,
       crust: this.state.currentCrust,
       defaultToppings: this.state.currentDefaultToppings,
-      additionalToppings: this.state.additionalToppings,
+      additionalToppings: this.state.currentAdditionalToppings,
       price: (this.state.currentSize.sizePrice + this.state.currentCrust.crustPrice + this.state.currentAdditionalToppingsPrice),
       number: 1,
     });

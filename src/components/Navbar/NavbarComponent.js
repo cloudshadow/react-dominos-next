@@ -15,6 +15,7 @@ export default class NavbarComponent extends React.Component {
 
   componentDidMount() {
     !this.props.authState.user && localStorage.user ? this.props.reloadAuth() : '';
+    !this.props.menuState.pizzaOptions ? this.props.getPizzaOptions() : '';
   }
 
   activeMenu(pathname) {
@@ -112,6 +113,8 @@ export default class NavbarComponent extends React.Component {
 NavbarComponent.propTypes = {
   authState: PropTypes.object.isRequired,
   cartState: PropTypes.object.isRequired,
+  menuState: PropTypes.object.isRequired,
   reloadAuth: PropTypes.func.isRequired,
   logout: PropTypes.func.isRequired,
+  getPizzaOptions: PropTypes.func.isRequired,
 };
