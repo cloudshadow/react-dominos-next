@@ -10,10 +10,10 @@ export default class CarouselComponent extends React.Component {
     super(props);
     this.props = props;
     this.settings = {
-      arrows: false,
+      arrows: true,
       autoplay: true,
       autoplaySpeed: 5000,
-      dots: true,
+      dots: false,
       infinite: true,
       // speed: 2500,
       slidesToShow: this.props.number,

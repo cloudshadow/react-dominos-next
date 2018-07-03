@@ -1,12 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CarouselMultipleComponent from '../Shared/Carousel/CarouselMultipleComponent';
+import objectAssign from 'object-assign';
 import './cart.scss';
 
 export default class CartComponent extends React.Component {
   constructor(props) {
     super(props);
     this.props = props;
+    this.state = {
+      allCartItemsNumber: 0,
+      allCartItemsPrice: 0,
+    };
   }
 
   componentDidMount() {
@@ -14,6 +19,15 @@ export default class CartComponent extends React.Component {
     this.props.getSuggestionItems();
   }
 
+  handleNumberClick(item, option) {
+    let updatedItem = objectAssign([], item);
+    updatedItem.number += option;
+    this.props.updateCart(updatedItem);
+  }
+
+  handleDeleteClick(item) {
+    this.props.deleteItem(item);
+  }
   handleCleanCartClick() {
     this.props.cleanCart();
   }
@@ -49,28 +63,34 @@ export default class CartComponent extends React.Component {
           {additionalToppingsName ? ('AdditionToppings: ' + additionalToppingsName) : ''}
         </div>
       </div>
-    )
+    );
   }
 
   renderCartList() {
     return (
       <div>
         <div className="row">
-          <div className="col-sm-2">
-            <button className="btn" onClick={this.handleCleanCartClick.bind(this)}>Remove All</button>
+          <div className="col-sm-12 title">
+            Shopping Cart
           </div>
-          <div className="col-sm-6">
+        </div>
+        <div className="row header">
+          <div className="col-sm-2 remove-btn-wrapper">
+            <div className="remove-all-btn" onClick={this.handleCleanCartClick.bind(this)}>Remove All</div>
+          </div>
+          <div className="col-sm-5 header-title-left">
             Name
           </div>
-          <div className="col-sm-1">
+          <div className="col-sm-1 header-title">
             Price
           </div>
-          <div className="col-sm-2">
+          <div className="col-sm-2 header-title">
             Number
           </div>
-          <div className="col-sm-1">
-            Total Price
+          <div className="col-sm-1 header-title">
+            Total
           </div>
+          <div className="col-sm-1 header-title" />
         </div>
         {
           this.props.cartState.items.map(item => {
@@ -79,7 +99,7 @@ export default class CartComponent extends React.Component {
                 <div className="col-sm-2 image">
                   <img src={item.image} />
                 </div>
-                <div className="col-sm-6 detail">
+                <div className="col-sm-5 detail">
                   <div className="name">
                     {item.name}
                   </div>
@@ -91,10 +111,15 @@ export default class CartComponent extends React.Component {
                   {item.price}
                 </div>
                 <div className="col-sm-2 number">
-                  {item.number}
+                  <span className="oi oi-plus" onClick={this.handleNumberClick.bind(this, item, 1)} />
+                  <span className="count">{item.number}</span>
+                  <span className="oi oi-minus" onClick={this.handleNumberClick.bind(this, item, -1)} />
                 </div>
-                <div className="col-sm-1 total-price">
+                <div className="col-sm-1 total">
                   {item.price * item.number}
+                </div>
+                <div className="col-sm-1 option">
+                  <span className="delete" onClick={this.handleDeleteClick.bind(this, item)}>Delete</span>
                 </div>
               </div>
             );
@@ -110,19 +135,28 @@ export default class CartComponent extends React.Component {
 
   renderPage() {
     return (
-      <div className="container-fluid cart-container">
+      <div className="container cart-container">
         {this.props.cartState.items ? this.renderCartList() : this.renderEmptyCart()}
         <div className="row">
-          <div className="col-sm-12">
-            <div className="suggestion-title">
+          <div className="col-sm-8">
+          </div>
+          <div className="col-sm-3">
+          </div>
+          <div className="col-sm-1">
+          </div>
+        </div>
+
+        <div className="suggestion-wrapper">
+          <div className="row">
+            <div className="col-sm-12 suggestion-title">
               Suggestion
             </div>
           </div>
+          <CarouselMultipleComponent
+            suggestionItems={this.props.cartState.suggestionItems}
+            number={5}
+          />
         </div>
-        <CarouselMultipleComponent
-          suggestionItems={this.props.cartState.suggestionItems}
-          number={4}
-        />
       </div>
     );
   }
@@ -138,6 +172,9 @@ export default class CartComponent extends React.Component {
 
 CartComponent.propTypes = {
   getCart: PropTypes.func.isRequired,
+  addItem: PropTypes.func.isRequired,
+  updateCart: PropTypes.func.isRequired,
+  deleteItem: PropTypes.func.isRequired,
   cleanCart: PropTypes.func.isRequired,
   getSuggestionItems: PropTypes.func.isRequired,
   cartState: PropTypes.object.isRequired,

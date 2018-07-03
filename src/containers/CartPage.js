@@ -11,6 +11,9 @@ export class CartPage extends React.Component {
     return (
       <CartComponent
         getCart={this.props.cartActions.getCart}
+        addItem={this.props.cartActions.addItem}
+        updateCart={this.props.cartActions.updateCart}
+        deleteItem={this.props.cartActions.deleteItem}
         cleanCart={this.props.cartActions.cleanCart}
         getSuggestionItems={this.props.cartActions.getSuggestionItems}
         cartState={this.props.cartState}
