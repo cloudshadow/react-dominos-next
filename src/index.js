@@ -14,6 +14,7 @@ import HomePage from './containers/HomePage'; // eslint-disable-line import/no-n
 import MenuPage from './containers/MenuPage'; // eslint-disable-line import/no-named-as-default
 import PromotionPage from './containers/PromotionPage'; // eslint-disable-line import/no-named-as-default
 import CartPage from './containers/CartPage'; // eslint-disable-line import/no-named-as-default
+import OrderPage from './containers/OrderPage'; // eslint-disable-line import/no-named-as-default
 import Footer from './components/Footer/FooterComponent';
 import NotfoundPage from './containers/NotfoundPage'; // eslint-disable-line import/no-named-as-default
 
@@ -33,6 +34,7 @@ render(
             <Route path="/menu" component={MenuPage} />
             <Route path="/promotion" component={PromotionPage} />
             <Route path="/cart" component={CartPage} />
+            <Route path="/order" component={OrderPage} />
             <Route component={NotfoundPage} />
           </Switch>
         </div>

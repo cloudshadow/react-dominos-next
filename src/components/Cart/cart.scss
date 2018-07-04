@@ -73,6 +73,25 @@
       }
     }
   }
+  .order-wrapper {
+    margin-top: -1px;
+    .number-counter, .price-counter, .order {
+      background-color: #ccc;
+      height: 50px;
+      line-height: 50px;
+      font-size: 1.5rem;
+    }
+    .price-counter {
+      text-align: right;
+    }
+    .order{
+      background-color: #f14755;
+      a {
+        color:#fff;
+        text-decoration:none; 
+      } 
+    }
+  }
   .suggestion-wrapper{
     margin-top: 40px;
     .suggestion-title {

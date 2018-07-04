@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import objectAssign from 'object-assign';
 import './side.scss';
 
 export default class SideComponent extends React.Component {
@@ -8,34 +9,39 @@ export default class SideComponent extends React.Component {
     this.props = props;
   }
 
-  // componentWillMount() {
-
-  // }
   componentDidMount() {
     this.props.getSideMenu();
+  }
+
+  handelAddClick(item) {
+    let addedItem = objectAssign({}, item);
+    addedItem.t = new Date().getTime();
+    addedItem.price = item.promoPrice || item.originPrice;
+    addedItem.number = 1;
+    this.props.addItem(addedItem);
   }
 
   renderSideList() {
     return (
       <div>
         {
-          this.props.menuState.sideMenu.map(sideList => {
+          this.props.menuState.sideMenu.map(itemList => {
             return (
-              <div key={sideList.category} className="row">
+              <div key={itemList.category} className="row">
                 <div className="col-12 category-name">
-                  {sideList.category}
+                  {itemList.category}
                 </div>
                 {
-                  sideList.list.map(side => {
+                  itemList.list.map(item => {
                     return (
-                      <div key={side.id} className="col-3">
+                      <div key={item.id} className="col-3">
                         <div className="card item-box">
-                          <img className="card-img-top" src={side.image} />
+                          <img className="card-img-top" src={item.image} />
                           <div className="card-body">
-                            <h5 className="card-title">{side.name}</h5>
-                            <div className="card-text promo-text">{side.promotionInfo ? <span>{side.promotionInfo}</span> : ''}</div>
-                            <div className="card-text price">{side.promoPrice ? <div>￥{side.promoPrice} <span className="expired-price">￥{side.originPrice}</span></div> : '￥' + side.originPrice}</div>
-                            <a href="#" className="btn btn-primary btn-cart">Add to Cart</a>
+                            <h5 className="card-title">{item.name}</h5>
+                            <div className="card-text promo-text">{item.promotionInfo ? <span>{item.promotionInfo}</span> : ''}</div>
+                            <div className="card-text price">{item.promoPrice ? <div>￥{item.promoPrice} <span className="expired-price">￥{item.originPrice}</span></div> : '￥' + item.originPrice}</div>
+                            <a href="javascript:;" className="btn btn-primary btn-cart" onClick={this.handelAddClick.bind(this, item)}>Add to Cart</a>
                           </div>
                         </div>
                       </div>
@@ -49,7 +55,6 @@ export default class SideComponent extends React.Component {
       </div>
     );
   }
-
 
   render() {
     return (
@@ -65,4 +70,5 @@ export default class SideComponent extends React.Component {
 SideComponent.propTypes = {
   menuState: PropTypes.object.isRequired,
   getSideMenu: PropTypes.func.isRequired,
+  addItem: PropTypes.func.isRequired,
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import CarouselMultipleComponent from '../Shared/Carousel/CarouselMultipleComponent';
 import objectAssign from 'object-assign';
 import './cart.scss';
@@ -67,6 +68,12 @@ export default class CartComponent extends React.Component {
   }
 
   renderCartList() {
+    let numberCounter = 0;
+    let priceCounter = 0;
+    this.props.cartState.items.forEach(item => {
+      numberCounter += item.number;
+      priceCounter += (item.price * item.number);
+    });
     return (
       <div>
         <div className="row">
@@ -125,6 +132,17 @@ export default class CartComponent extends React.Component {
             );
           })
         }
+        <div className="row order-wrapper">
+          <div className="col-sm-8 number-counter">
+            Items: {numberCounter}
+          </div>
+          <div className="col-sm-3 price-counter">
+            Total Price: {priceCounter}
+          </div>
+          <div className="col-sm-1 order">
+            <Link to="/order">Order</Link>
+          </div>
+        </div>
       </div>
     );
   }
@@ -137,14 +155,7 @@ export default class CartComponent extends React.Component {
     return (
       <div className="container cart-container">
         {this.props.cartState.items ? this.renderCartList() : this.renderEmptyCart()}
-        <div className="row">
-          <div className="col-sm-8">
-          </div>
-          <div className="col-sm-3">
-          </div>
-          <div className="col-sm-1">
-          </div>
-        </div>
+
 
         <div className="suggestion-wrapper">
           <div className="row">
