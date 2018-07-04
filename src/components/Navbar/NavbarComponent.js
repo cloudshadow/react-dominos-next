@@ -73,7 +73,6 @@ export default class NavbarComponent extends React.Component {
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link className="nav-link" to="/cart">
-                {console.log(this.props.cartState.items)}
                 <span className="oi oi-cart" />
                 <span className="cart-count">{this.props.cartState.items && this.props.cartState.items.length > 0 ? this.props.cartState.items.length : ''}</span>
               </Link>

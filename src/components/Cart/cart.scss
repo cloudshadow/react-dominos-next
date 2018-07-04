@@ -1,5 +1,14 @@
 .cart-container{
   padding-top: 5px; 
+  .empty-cart-text{
+    text-align: center;
+    font-size: 2rem;
+    color: #aaa;
+    padding: 20px;
+  }
+  .empty-cart {
+    width: 80%;
+  }
   .title{
     font-size: 1.5rem;
     padding: 20px 0;

@@ -1,0 +1,20 @@
+.message-dialog-container{
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  margin: 30vh 40vw;
+  width: 20vw;
+  background-color: #fff;
+  font-size: 1.5rem;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
+  border: 1px solid rgba(0, 0, 0, .1);
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  .message-text {
+    padding-left: 20px;
+  }
+}
+.success {
+  color: green;
+}

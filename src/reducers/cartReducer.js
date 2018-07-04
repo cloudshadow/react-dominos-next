@@ -10,13 +10,16 @@ import {
   CLEAN_CART_SUCCESS,
   CLEAN_CART_FAILED,
   GET_SUGGESTION_ITEMS_SUCCESS,
-  GET_SUGGESTION_ITEMS_FAILED
+  GET_SUGGESTION_ITEMS_FAILED,
+  HIDE_MESSAGE_DIALOG
 } from '../actions/cartActions';
 // import objectAssign from 'object-assign';
 
 const initialState = {
   items: null,
   suggestionItems: null,
+  showMessageDialog: false,
+  showMessageDialogType: null,
   error: null,
   token: null
 };
@@ -37,6 +40,8 @@ export default (state = initialState, action) => {
       return {
         ...state,
         items: action.items,
+        showMessageDialog: true,
+        showMessageDialogType: 'addCartSuccess',
       };
     case ADD_ITEM_FAILED:
       return {
@@ -82,6 +87,12 @@ export default (state = initialState, action) => {
       return {
         ...state,
         error: action.error,
+      };
+    case HIDE_MESSAGE_DIALOG:
+      return {
+        ...state,
+        showMessageDialog: false,
+        showMessageDialogType: null,
       };
     default:
       return state;

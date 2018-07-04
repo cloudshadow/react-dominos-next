@@ -22,11 +22,12 @@
 | Sign In         | Finished      |
 | Sign Up         | Part      | Finished UI 
 | Sign Out        | Finished      |
-| Cart            | Part      | Woking on this function
+| Cart            | Finished      | 
+| Order           | TBD      | Woking on this function
 
 ## Libraries
-  * [React V16](https://reactjs.org/)
-  * [React Router V4](https://reacttraining.com/react-router/)
+  * [React v16](https://reactjs.org/)
+  * [React Router v4](https://reacttraining.com/react-router/)
   * [Redux](https://redux.js.org/)
   * [Axios](https://github.com/axios/axios)
   * [Babel](https://babeljs.io/)

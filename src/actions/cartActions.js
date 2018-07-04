@@ -31,7 +31,6 @@ export function addItem(item) {
     axios.get(urlHelper.t('v1/cartitems'), { item }).then(response => {
 
       // ==============code for test begin==============
-      console.log('in add cart')
       let items = localCartForTest(item, 'add');
       dispatch({ type: ADD_ITEM_SUCCESS, items });
       // ==============code for test end==============
@@ -118,6 +117,13 @@ export function getSuggestionItems() {
       dispatch({ type: GET_SUGGESTION_ITEMS_FAILED, error });
       history.push('/error');
     });
+  };
+}
+
+export const HIDE_MESSAGE_DIALOG = 'HIDE_MESSAGE_DIALOG';
+export function hideMessageDialog() {
+  return dispatch => {
+    dispatch({ type: HIDE_MESSAGE_DIALOG });
   };
 }
 

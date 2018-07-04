@@ -11,6 +11,7 @@ export class MenuPage extends React.Component {
     return (
       <MenuComponent
         menuState={this.props.menuState}
+        cartState={this.props.cartState}
         getPizzaMenu={this.props.menuActions.getPizzaMenu}
         getPizzaOptions={this.props.menuActions.getPizzaOptions}
         getPizzaDetail={this.props.menuActions.getPizzaDetail}
@@ -22,6 +23,7 @@ export class MenuPage extends React.Component {
         getSoupMenu={this.props.menuActions.getSoupMenu}
         getComboMenu={this.props.menuActions.getComboMenu}
         addItem={this.props.cartActions.addItem}
+        hideMessageDialog={this.props.cartActions.hideMessageDialog}
       />
     );
   }

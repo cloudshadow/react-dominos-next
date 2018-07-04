@@ -76,11 +76,6 @@ export default class CartComponent extends React.Component {
     });
     return (
       <div>
-        <div className="row">
-          <div className="col-sm-12 title">
-            Shopping Cart
-          </div>
-        </div>
         <div className="row header">
           <div className="col-sm-2 remove-btn-wrapper">
             <div className="remove-all-btn" onClick={this.handleCleanCartClick.bind(this)}>Remove All</div>
@@ -148,13 +143,28 @@ export default class CartComponent extends React.Component {
   }
 
   renderEmptyCart() {
+    return (
+      <div className="row">
+        <div className="col-sm-12 empty-cart-text">
+          Cart is empty.
+        </div>
+        <div className="col-sm-4 offset-sm-4">
+          <img className="empty-cart" src="http://static-test.dominos.com.cn/000/empty.png" />
+        </div>
 
+      </div>
+    );
   }
 
   renderPage() {
     return (
       <div className="container cart-container">
-        {this.props.cartState.items ? this.renderCartList() : this.renderEmptyCart()}
+        <div className="row">
+          <div className="col-sm-12 title">
+            Shopping Cart
+          </div>
+        </div>
+        {this.props.cartState.items && this.props.cartState.items.length > 0 ? this.renderCartList() : this.renderEmptyCart()}
 
 
         <div className="suggestion-wrapper">

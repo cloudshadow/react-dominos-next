@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import objectAssign from 'object-assign';
+import MessageDialogComponent from '../../Shared/MessageDialog/MessageDialogComponent';
 import './soup.scss';
 
 export default class SoupComponent extends React.Component {
@@ -62,6 +63,9 @@ export default class SoupComponent extends React.Component {
         {
           this.props.menuState.soupMenu ? this.renderSoupList() : ''
         }
+        {
+          this.props.cartState.showMessageDialog ? <MessageDialogComponent type={this.props.cartState.showMessageDialogType} hideFunc={this.props.hideMessageDialog} /> : ''
+        }
       </div>
     );
   }
@@ -69,6 +73,8 @@ export default class SoupComponent extends React.Component {
 
 SoupComponent.propTypes = {
   menuState: PropTypes.object.isRequired,
+  cartState: PropTypes.object.isRequired,
+  hideMessageDialog: PropTypes.func.isRequired,
   getSoupMenu: PropTypes.func.isRequired,
   addItem: PropTypes.func.isRequired,
 };
