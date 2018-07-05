@@ -1,14 +1,16 @@
 import {
-  // LOGIN,
   LOGIN_SUCCESS,
   LOGIN_FAILED,
   LOGOUT,
-  RELOAD_AUTH
-} from '../actions/authActions';
+  RELOAD_AUTH,
+  GET_ADDRESS_BOOK_SUCCESS,
+  GET_ADDRESS_BOOK_FAILED
+} from '../actions/userActions';
 // import objectAssign from 'object-assign';
 
 const initialState = {
   user: null,
+  addressBook: null,
   error: null,
   token: null
 };
@@ -29,11 +31,22 @@ export default (state = initialState, action) => {
     case RELOAD_AUTH:
       return {
         ...state,
-        user: action.user,
-        token: action.token
+        user: action.user
       };
     case LOGOUT:
-      return { ...initialState };
+      return {
+        ...initialState
+      };
+    case GET_ADDRESS_BOOK_SUCCESS:
+      return {
+        ...state,
+        addressBook: action.addressBook,
+      };
+    case GET_ADDRESS_BOOK_FAILED:
+      return {
+        ...state,
+        error: action.error
+      };
     default:
       return state;
   }

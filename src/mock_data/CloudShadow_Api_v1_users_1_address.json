@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "cloud",
+    "phone": 13612345678,
+    "city": "shanghai",
+    "district": "huangpu",
+    "road": "road",
+    "address": "aabbcc",
+    "default": true
+  },
+  {
+    "id": 2,
+    "name": "cloud2",
+    "phone": 13600000000,
+    "city": "shanghai",
+    "district": "xuhui",
+    "road": "road2",
+    "address": "aabbccddeeff",
+    "default": false
+  }
+]

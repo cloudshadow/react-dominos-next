@@ -74,7 +74,7 @@ export default class RiceComponent extends React.Component {
 RiceComponent.propTypes = {
   menuState: PropTypes.object.isRequired,
   cartState: PropTypes.object.isRequired,
-  getRiceMenu: PropTypes.func.isRequired,
-  addItem: PropTypes.func.isRequired,
   hideMessageDialog: PropTypes.func.isRequired,
+  getDrinkMenu: PropTypes.func.isRequired,
+  addItem: PropTypes.func.isRequired,
 };

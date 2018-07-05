@@ -2,31 +2,40 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as orderActions from '../actions/orderActions';
+import * as cartActions from '../actions/cartActions';
+import * as userActions from '../actions/userActions';
 import OrderComponent from '../components/Order/OrderComponent';
 
 export class OrderPage extends React.Component {
   render() {
     return (
-      <OrderComponent />
+      <OrderComponent
+        cartState={this.props.cartState}
+        userState={this.props.userState}
+        getAddressBook={this.props.userActions.getAddressBook}
+      />
     );
   }
 }
 
 OrderPage.propTypes = {
-  orderActions: PropTypes.object.isRequired,
-  orderState: PropTypes.object.isRequired,
+  cartActions: PropTypes.object.isRequired,
+  cartState: PropTypes.object.isRequired,
+  userActions: PropTypes.object.isRequired,
+  userState: PropTypes.object.isRequired,
 };
 
 function mapStateToProps(state) {
   return {
-    orderState: state.orderState,
+    cartState: state.cartState,
+    userState: state.userState,
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    orderActions: bindActionCreators(orderActions, dispatch)
+    cartActions: bindActionCreators(cartActions, dispatch),
+    userActions: bindActionCreators(userActions, dispatch)
   };
 }
 

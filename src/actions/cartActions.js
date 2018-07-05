@@ -48,7 +48,7 @@ export const UPDATE_CART_SUCCESS = 'UPDATE_CART_SUCCESS';
 export const UPDATE_CART_FAILED = 'UPDATE_CART_FAILED';
 export function updateCart(item) {
   return dispatch => {
-    // axios.put(urlHelper.t('v1/cartitems'), { item }).then(response => {
+    // axios.put(urlHelper.t('v1/cartitems/' + item.id), { item }).then(response => {
     axios.get(urlHelper.t('v1/cartitems'), { item }).then(response => {
 
       // ==============code for test begin==============
@@ -69,7 +69,7 @@ export const DELETE_ITEM_SUCCESS = 'DELETE_ITEM_SUCCESS';
 export const DELETE_ITEM_FAILED = 'DELETE_ITEM_FAILED';
 export function deleteItem(item) {
   return dispatch => {
-    // axios.delete(urlHelper.t('v1/cartitems'), { item }).then(response => {
+    // axios.delete(urlHelper.t('v1/cartitems/' + item.id)).then(response => {
     axios.get(urlHelper.t('v1/cartitems'), { item }).then(response => {
 
       // ==============code for test begin==============

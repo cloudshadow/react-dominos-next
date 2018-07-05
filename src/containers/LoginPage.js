@@ -2,35 +2,35 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as authActions from '../actions/authActions';
+import * as userActions from '../actions/userActions';
 import LoginComponent from '../components/Login/LoginComponent';
 
 export class LoginPage extends React.Component {
   render() {
     return (
       <LoginComponent
-        login={this.props.authActions.login}
-        signup={this.props.authActions.signup}
-        authState={this.props.authState}
+        login={this.props.userActions.login}
+        signup={this.props.userActions.signup}
+        userState={this.props.userState}
       />
     );
   }
 }
 
 LoginPage.propTypes = {
-  authActions: PropTypes.object.isRequired,
-  authState: PropTypes.object.isRequired,
+  userActions: PropTypes.object.isRequired,
+  userState: PropTypes.object.isRequired,
 };
 
 function mapStateToProps(state) {
   return {
-    authState: state.authState,
+    userState: state.userState,
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    authActions: bindActionCreators(authActions, dispatch)
+    userActions: bindActionCreators(userActions, dispatch)
   };
 }
 

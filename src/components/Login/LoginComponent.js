@@ -23,9 +23,6 @@ export default class LoginComponent extends React.Component {
   }
 
   handleButtonClick() {
-    console.log(this.state.model);
-    console.log(this.state.email);
-    console.log(this.state.password);
     this.state.model === 'login' ? this.props.login(this.state.email, this.state.password) : this.props.signup(this.state.email, this.state.password);
   }
 
@@ -69,5 +66,5 @@ export default class LoginComponent extends React.Component {
 LoginComponent.propTypes = {
   login: PropTypes.func.isRequired,
   signup: PropTypes.func.isRequired,
-  authState: PropTypes.object.isRequired,
+  userState: PropTypes.object.isRequired,
 };

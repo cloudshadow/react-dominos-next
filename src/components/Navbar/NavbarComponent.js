@@ -14,7 +14,7 @@ export default class NavbarComponent extends React.Component {
   }
 
   componentDidMount() {
-    !this.props.authState.user && localStorage.user ? this.props.reloadAuth() : '';
+    !this.props.userState.user && localStorage.user ? this.props.reloadAuth() : '';
     !this.props.menuState.pizzaOptions ? this.props.getPizzaOptions() : '';
   }
 
@@ -78,11 +78,11 @@ export default class NavbarComponent extends React.Component {
               </Link>
             </li>
             {
-              this.props.authState.user
+              this.props.userState.user
                 ?
                 <li className={'nav-item dropdown ' + (this.state.dropDownShow ? 'show' : '')}>
                   <a className="nav-link dropdown-toggle" href="javascript:;" onClick={this.handleDropDownClick.bind(this)} role="button" aria-haspopup="true" aria-expanded={this.state.dropDownShow ? 'true' : 'false'}>
-                    {this.props.authState.user.name}
+                    {this.props.userState.user.name}
                   </a>
                   <div className={'dropdown-menu dropdown-menu-right ' + (this.state.dropDownShow ? 'show' : '')} onClick={this.handleDropDownClick.bind(this)} aria-labelledby="navbarDropdown">
                     <Link className="dropdown-item" to="/member">Member</Link>
@@ -110,7 +110,7 @@ export default class NavbarComponent extends React.Component {
 }
 
 NavbarComponent.propTypes = {
-  authState: PropTypes.object.isRequired,
+  userState: PropTypes.object.isRequired,
   cartState: PropTypes.object.isRequired,
   menuState: PropTypes.object.isRequired,
   reloadAuth: PropTypes.func.isRequired,

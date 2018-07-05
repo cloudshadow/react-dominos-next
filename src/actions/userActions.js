@@ -72,6 +72,21 @@ export function logout() {
   };
 }
 
+export const GET_ADDRESS_BOOK_SUCCESS = 'GET_ADDRESS_BOOK_SUCCESS';
+export const GET_ADDRESS_BOOK_FAILED = 'GET_ADDRESS_BOOK_FAILED';
+export function getAddressBook(user) {
+  return dispatch => {
+    axios.get(urlHelper.t('v1/users/' + user.id + '/address')).then(response => {
+      const { data: addressBook } = response;
+      dispatch({ type: GET_ADDRESS_BOOK_SUCCESS, addressBook });
+    }).catch(error => {
+      if (error.response.status >= 400 && error.response.status !== 401) {
+        dispatch({ type: GET_ADDRESS_BOOK_FAILED, error: error.response.statusText });
+      }
+    });
+  };
+}
+
 export const SET_LANGUAGE = 'SET_LANGUAGE';
 export function setLanguage(language) {
   return dispatch => {
@@ -80,11 +95,3 @@ export function setLanguage(language) {
     dispatch({ type: SET_LANGUAGE, language });
   };
 }
-
-export const CONTROL_MSG_TIP = 'CONTROL_MSG_TIP';
-export function controlMsgTip() {
-  return dispatch => {
-    dispatch({ type: CONTROL_MSG_TIP });
-  };
-}
-
