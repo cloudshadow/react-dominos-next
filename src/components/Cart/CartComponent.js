@@ -165,8 +165,6 @@ export default class CartComponent extends React.Component {
           </div>
         </div>
         {this.props.cartState.items && this.props.cartState.items.length > 0 ? this.renderCartList() : this.renderEmptyCart()}
-
-
         <div className="suggestion-wrapper">
           <div className="row">
             <div className="col-sm-12 suggestion-title">

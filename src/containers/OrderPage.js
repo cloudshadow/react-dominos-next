@@ -9,11 +9,20 @@ import OrderComponent from '../components/Order/OrderComponent';
 export class OrderPage extends React.Component {
   render() {
     return (
-      <OrderComponent
-        cartState={this.props.cartState}
-        userState={this.props.userState}
-        getAddressBook={this.props.userActions.getAddressBook}
-      />
+      <div>
+        {
+          this.props.userState.user ?
+            <OrderComponent
+              cartState={this.props.cartState}
+              getCart={this.props.cartActions.getCart}
+              userState={this.props.userState}
+              getAddressBook={this.props.userActions.getAddressBook}
+              menuState={this.props.menuState}
+            />
+            :
+            ''
+        }
+      </div>
     );
   }
 }
@@ -23,12 +32,14 @@ OrderPage.propTypes = {
   cartState: PropTypes.object.isRequired,
   userActions: PropTypes.object.isRequired,
   userState: PropTypes.object.isRequired,
+  menuState: PropTypes.object.isRequired,
 };
 
 function mapStateToProps(state) {
   return {
     cartState: state.cartState,
     userState: state.userState,
+    menuState: state.menuState,
   };
 }
 

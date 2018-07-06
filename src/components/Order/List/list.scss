@@ -1,0 +1,32 @@
+.list-container{
+  padding-top: 20px;
+  .form-wrapper {
+    border: 1px solid #dee2e6;
+    padding: 10px 15px;
+    margin-right: 0;
+    margin-left: 0;
+    .title{
+      font-size: 1.8rem;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+  .item-wrapper{
+    padding-top: 10px;
+    .name {
+      font-size: 1rem;
+    }
+    .detail {
+      color: #777;
+      font-size: .8rem;
+    }
+  }
+  .counter{
+    text-align: right;
+    padding-top: 30px;
+    font-size: 1.2rem;
+    span{
+      padding-left: 20px;
+    }
+  }
+}

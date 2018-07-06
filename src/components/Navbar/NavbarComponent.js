@@ -9,7 +9,8 @@ export default class NavbarComponent extends React.Component {
     this.props = props;
     this.logo = require('../../assets/images/logo.png');
     this.state = {
-      dropDownShow: false
+      dropDownShow: false,
+      current: window.location.pathname,
     };
   }
 
@@ -19,11 +20,9 @@ export default class NavbarComponent extends React.Component {
   }
 
   activeMenu(pathname) {
-    if (pathname === '/') {
-      return window.location.pathname === pathname ? 'nav-item active' : 'nav-item';
-    } else {
-      return window.location.pathname.includes(pathname) ? 'nav-item active' : 'nav-item';
-    }
+    this.setState({
+      current: pathname
+    });
   }
 
   handleDropDownClick() {
@@ -49,13 +48,13 @@ export default class NavbarComponent extends React.Component {
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
-            <li className={this.activeMenu('/')}>
+            <li className={this.state.current === '/' ? 'nav-item active' : 'nav-item'} onClick={this.activeMenu.bind(this, '/')}>
               <Link className="nav-link" to="/">Home</Link>
             </li>
-            <li className={this.activeMenu('/menu')}>
+            <li className={this.state.current.includes('/menu') ? 'nav-item active' : 'nav-item'} onClick={this.activeMenu.bind(this, '/menu')}>
               <Link className="nav-link" to="/menu/pizza">Menu</Link>
             </li>
-            <li className={this.activeMenu('/promotion')}>
+            <li className={this.state.current === '/promotion' ? 'nav-item active' : 'nav-item'} onClick={this.activeMenu.bind(this, '/promotion')}>
               <Link className="nav-link" to="/promotion">Promotion</Link>
             </li>
             {/*
@@ -66,7 +65,7 @@ export default class NavbarComponent extends React.Component {
               <Link className="nav-link" to="/stores">Stores</Link>
             </li>
             */}
-            <li className={this.activeMenu('/member')}>
+            <li className={this.state.current === '/member' ? 'nav-item active' : 'nav-item'} onClick={this.activeMenu.bind(this, '/member')}>
               <Link className="nav-link" to="/member">Member</Link>
             </li>
           </ul>
