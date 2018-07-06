@@ -22,8 +22,8 @@
 | Sign In         | Finished      |
 | Sign Up         | Part      | Finished UI 
 | Sign Out        | Finished      |
-| Cart            | Finished      | 
-| Order           | Finished      | 
+| Cart            | Part      | Remaning add suggestion functon
+| Order           | Part      | Remaning check user login
 
 ## Libraries
   * [React v16](https://reactjs.org/)
