@@ -60,8 +60,7 @@ export default class ListComponent extends React.Component {
               <div className="col-sm-3 header-title">
                 Name
               </div>
-              <div className="col-sm-5 header-title">
-              </div>
+              <div className="col-sm-5 header-title" />
               <div className="col-sm-1 header-title">
                 Price
               </div>
