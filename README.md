@@ -11,11 +11,11 @@
 | --------------- | ------------- | ------------------- |
 | Home            | Finished      |
 | Menu - Pizza    | Finished      |
-| Menu - Rice     | Part      | Remaining add cart function
-| Menu - SideFood | Part      | Remaining add cart function
-| Menu - Dessert  | Part      | Remaining add cart function
-| Menu - Drink    | Part      | Remaining add cart function
-| Menu - Soup     | Part      | Remaining add cart function
+| Menu - Rice     | Finished      | 
+| Menu - SideFood | Finished      | 
+| Menu - Dessert  | Finished      | 
+| Menu - Drink    | Finished      | 
+| Menu - Soup     | Finished      | 
 | Menu - Combo    | TBD      |
 | Promotion       | Finished      |
 | Member          | TBD      |
@@ -23,7 +23,7 @@
 | Sign Up         | Part      | Finished UI 
 | Sign Out        | Finished      |
 | Cart            | Finished      | 
-| Order           | TBD      | Woking on this function
+| Order           | Finished      | 
 
 ## Libraries
   * [React v16](https://reactjs.org/)
