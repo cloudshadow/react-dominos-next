@@ -4,12 +4,14 @@ import {
   LOGOUT,
   RELOAD_AUTH,
   GET_ADDRESS_BOOK_SUCCESS,
-  GET_ADDRESS_BOOK_FAILED
+  GET_ADDRESS_BOOK_FAILED,
+  GO_LOGIN,
 } from '../actions/userActions';
 // import objectAssign from 'object-assign';
 
 const initialState = {
   user: null,
+  previousPath: '/',
   addressBook: null,
   error: null,
   token: null
@@ -21,7 +23,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         user: action.user,
-        token: action.token
+        previousPath: '/',
       };
     case LOGIN_FAILED:
       return {
@@ -46,6 +48,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         error: action.error
+      };
+    case GO_LOGIN:
+      return {
+        ...state,
+        previousPath: action.previousPath
       };
     default:
       return state;

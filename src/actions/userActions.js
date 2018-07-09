@@ -5,7 +5,7 @@ import history from '../utils/history';
 
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 export const LOGIN_FAILED = 'LOGIN_FAILED';
-export function login(email, password) {
+export function login(email, password, previousPath) {
   return dispatch => {
     axios.get(urlHelper.t('v1/login'), {
       // axios.post(urlHelper.t('login'), {
@@ -15,7 +15,7 @@ export function login(email, password) {
       const { data: user } = response;
       localStorage.setItem('user', JSON.stringify(user));
       dispatch({ type: LOGIN_SUCCESS, user });
-      history.push('/');
+      history.push(previousPath);
     }).catch(error => {
       if (error.response.status >= 400 && error.response.status !== 401) {
         dispatch({ type: LOGIN_FAILED, error: error.response.statusText });
@@ -84,6 +84,14 @@ export function getAddressBook(user) {
         dispatch({ type: GET_ADDRESS_BOOK_FAILED, error: error.response.statusText });
       }
     });
+  };
+}
+
+export const GO_LOGIN = 'GO_LOGIN';
+export function goLogin(previousPath) {
+  return dispatch => {
+    dispatch({ type: GO_LOGIN, previousPath });
+    history.push('/login');
   };
 }
 

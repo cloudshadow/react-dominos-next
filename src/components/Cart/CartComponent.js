@@ -32,6 +32,9 @@ export default class CartComponent extends React.Component {
   handleCleanCartClick() {
     this.props.cleanCart();
   }
+  handleGoLoginClick() {
+    this.props.goLogin('/cart');
+  }
 
   renderAdditionInfo(item) {
     let sizeName = '';
@@ -135,7 +138,7 @@ export default class CartComponent extends React.Component {
             Total Price: {priceCounter}
           </div>
           <div className="col-sm-1 order">
-            <Link to="/order">Order</Link>
+            {this.props.userState.user ? <Link to="/order">Order</Link> : <a href="javascript:;" onClick={this.handleGoLoginClick.bind(this)}>Order</a>}
           </div>
         </div>
       </div>
@@ -196,6 +199,8 @@ CartComponent.propTypes = {
   deleteItem: PropTypes.func.isRequired,
   cleanCart: PropTypes.func.isRequired,
   getSuggestionItems: PropTypes.func.isRequired,
+  goLogin: PropTypes.func.isRequired,
   cartState: PropTypes.object.isRequired,
   menuState: PropTypes.object.isRequired,
+  userState: PropTypes.object.isRequired,
 };

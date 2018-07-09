@@ -14,6 +14,10 @@ export default class LoginComponent extends React.Component {
     };
   }
 
+  componentDidMount() {
+    console.log(this.props.userState.previousPath)
+  }
+
   handleTabClick(model) {
     this.setState({ model });
   }
@@ -22,8 +26,8 @@ export default class LoginComponent extends React.Component {
     this.setState({ [event.target.id]: event.target.value });
   }
 
-  handleButtonClick() {
-    this.state.model === 'login' ? this.props.login(this.state.email, this.state.password) : this.props.signup(this.state.email, this.state.password);
+  handleLoginClick() {
+    this.state.model === 'login' ? this.props.login(this.state.email, this.state.password, this.props.userState.previousPath) : this.props.signup(this.state.email, this.state.password);
   }
 
   render() {
@@ -53,7 +57,7 @@ export default class LoginComponent extends React.Component {
                 <input type="password" id="repeatPassword" className="form-control" placeholder="Repeat Password" onChange={this.handleChange.bind(this)} />
               </div>
               <div className="form-group btn-wrapper">
-                <button className="btn btn-lg btn-block" onClick={this.handleButtonClick.bind(this)}>{this.state.model === 'login' ? 'Log In' : 'Sign Up'}</button>
+                <button className="btn btn-lg btn-block" onClick={this.handleLoginClick.bind(this)}>{this.state.model === 'login' ? 'Log In' : 'Sign Up'}</button>
               </div>
             </div>
           </div>
