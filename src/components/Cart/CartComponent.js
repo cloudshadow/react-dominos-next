@@ -80,31 +80,31 @@ export default class CartComponent extends React.Component {
     return (
       <div>
         <div className="row header">
-          <div className="col-sm-2 remove-btn-wrapper">
+          <div className="col-sm-2 col-12 remove-btn-wrapper">
             <div className="remove-all-btn" onClick={this.handleCleanCartClick.bind(this)}>Remove All</div>
           </div>
-          <div className="col-sm-5 header-title-left">
+          <div className="col-sm-5 d-none d-sm-block header-title-left">
             Name
           </div>
-          <div className="col-sm-1 header-title">
+          <div className="col-sm-1 d-none d-sm-block header-title">
             Price
           </div>
-          <div className="col-sm-2 header-title">
+          <div className="col-sm-2 d-none d-sm-block header-title">
             Number
           </div>
-          <div className="col-sm-1 header-title">
+          <div className="col-sm-1 d-none d-sm-block header-title">
             Total
           </div>
-          <div className="col-sm-1 header-title" />
+          <div className="col-sm-1 d-none d-sm-block header-title" />
         </div>
         {
           this.props.cartState.items.map(item => {
             return (
               <div className="row item-wrapper" key={item.id + item.t}>
-                <div className="col-sm-2 image">
+                <div className="col-sm-2 col-12 image">
                   <img src={item.image} />
                 </div>
-                <div className="col-sm-5 detail">
+                <div className="col-sm-5 col-12 detail">
                   <div className="name">
                     {item.name}
                   </div>
@@ -112,18 +112,18 @@ export default class CartComponent extends React.Component {
                     {item.type === 'pizza' ? this.renderAdditionInfo(item) : ''}
                   </div>
                 </div>
-                <div className="col-sm-1 price">
-                  {item.price}
+                <div className="col-sm-1 col-6 price">
+                  <span className="d-sm-none">Price: </span>{item.price}
                 </div>
-                <div className="col-sm-2 number">
+                <div className="col-sm-2 col-6 number">
                   <span className="oi oi-plus" onClick={this.handleNumberClick.bind(this, item, 1)} />
                   <span className="count">{item.number}</span>
                   <span className="oi oi-minus" onClick={this.handleNumberClick.bind(this, item, -1)} />
                 </div>
-                <div className="col-sm-1 total">
-                  {item.price * item.number}
+                <div className="col-sm-1 col-6 total">
+                  <span className="d-sm-none">Total: </span>{item.price * item.number}
                 </div>
-                <div className="col-sm-1 option">
+                <div className="col-sm-1 col-6 option">
                   <span className="delete" onClick={this.handleDeleteClick.bind(this, item)}>Delete</span>
                 </div>
               </div>
@@ -131,13 +131,13 @@ export default class CartComponent extends React.Component {
           })
         }
         <div className="row order-wrapper">
-          <div className="col-sm-8 number-counter">
+          <div className="col-sm-8 col-5 number-counter">
             Items: {numberCounter}
           </div>
-          <div className="col-sm-3 price-counter">
+          <div className="col-sm-3 col-7 price-counter">
             Total Price: {priceCounter}
           </div>
-          <div className="col-sm-1 order">
+          <div className="col-sm-1 col-12 order">
             {this.props.userState.user ? <Link to="/order">Order</Link> : <a href="javascript:;" onClick={this.handleGoLoginClick.bind(this)}>Order</a>}
           </div>
         </div>
@@ -175,6 +175,7 @@ export default class CartComponent extends React.Component {
             </div>
           </div>
           <CarouselMultipleComponent
+            className="d-none d-sm-block"
             suggestionItems={this.props.cartState.suggestionItems}
             number={5}
           />

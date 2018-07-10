@@ -96,32 +96,32 @@ export default class PizzaDialogComponent extends React.Component {
   render() {
     return (
       <div className="pizza-dialog-container">
+        <span className="oi oi-x" onClick={this.handleCloseClick.bind(this)} />
         <div className="pizza-dialog container-fluid">
-          <span className="oi oi-x" onClick={this.handleCloseClick.bind(this)} />
           <div className="row">
-            <div className="col-4">
+            <div className="col-sm-4 col-12">
               <div className="row">
-                <div className="col-12 pic">
+                <div className="col-sm-12 pic">
                   <img src={this.props.pizza.image} />
                 </div>
-                <div className="col-12 name">
+                <div className="col-sm-12 name">
                   {this.props.pizza.name}
                 </div>
-                <div className="col-12 desc">
+                <div className="col-sm-12 desc">
                   {this.props.pizza.desc}
                 </div>
-                <div className="col-6 price">
+                <div className="co-sm-6 col-12 price">
                   <span className="name">价格</span>
                   <span className="value">￥{this.state.currentSize.sizePrice + this.state.currentCrust.crustPrice + this.state.currentAdditionalToppingsPrice}</span>
                 </div>
-                <div className="col-6 cart">
+                <div className="col-sm-6 col-12 cart">
                   <button className="btn btn-success" onClick={this.handleAddCartClick.bind(this)}><span className="oi oi-cart" /> Add to Cart</button>
                 </div>
               </div>
             </div>
-            <div className="col-4">
+            <div className="col-sm-4 col-12">
               <div className="row size">
-                <div className="col-12 title">
+                <div className="col-sm-12 title">
                   Size
                 </div>
                 {this.props.pizza.sizes.map(pizzaSize => {
@@ -157,7 +157,7 @@ export default class PizzaDialogComponent extends React.Component {
                 })}
               </div>
             </div>
-            <div className="col-4">
+            <div className="col-sm-4 col-12">
               <div className="row topping">
                 <div className="col-12 title">
                   Default Topping

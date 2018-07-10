@@ -1,3 +1,35 @@
-// .member{
-//   color: red;
-// }
+.member-container{
+  padding-top: 20px;
+  .user-wrapper{
+    min-height: 700px;
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    .avatar{
+      padding: 3vh;
+      img {
+        width: 6vw;
+        border-radius: 3vw;
+      }
+    }
+    .name{
+      font-size: 1.5rem;
+    }
+    .member{
+      color: rgb(243, 217, 70);
+    }
+    .expired{
+      font-size: .8rem;
+      padding-bottom: 3vh;
+    }
+    .member-menu{
+      height: 5vh;
+      line-height: 5vh;
+      font-size: 1.2rem;
+      a{
+        color: #fff;
+      }
+      
+    }
+  }
+}

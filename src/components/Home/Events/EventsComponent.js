@@ -14,7 +14,7 @@ export default class EventsComponent extends React.Component {
       <div className="container-fluid events-container">
         <div className="row">
           {this.props.eventImages.map(item =>
-            <div className="col-sm-3 event" key={item.id}>
+            <div className="col-sm-3 col-12 event" key={item.id}>
               <Link to={item.link}>
                 <img src={item.url} />
               </Link>

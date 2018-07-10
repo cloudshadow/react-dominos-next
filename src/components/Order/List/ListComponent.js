@@ -57,17 +57,17 @@ export default class ListComponent extends React.Component {
               <div className="col-sm-12 title">
                 Items List
               </div>
-              <div className="col-sm-3 header-title">
+              <div className="col-sm-3 col-5 header-title">
                 Name
               </div>
-              <div className="col-sm-5 header-title" />
-              <div className="col-sm-1 header-title">
+              <div className="col-sm-5 d-none d-sm-block header-title" />
+              <div className="col-sm-1 col-2 header-title">
                 Price
               </div>
-              <div className="col-sm-1 header-title">
+              <div className="col-sm-1 col-2 header-title">
                 Number
               </div>
-              <div className="col-sm-2 header-title">
+              <div className="col-sm-2 col-3 header-title">
                 Total
               </div>
               {
@@ -75,23 +75,23 @@ export default class ListComponent extends React.Component {
                   return (
                     <div className="col-sm-12 item-wrapper" key={item.id + item.t}>
                       <div className="row">
-                        <div className="col-sm-3 name">
+                        <div className="col-sm-3 col-5 name">
                           {item.name}
                         </div>
-                        <div className="col-sm-5 detail">
+                        <div className="col-sm-5 d-none d-sm-block detail">
                           <div className="addition">
                             {
                               item.type === 'pizza' ? this.renderAdditionInfo(item) : ''
                             }
                           </div>
                         </div>
-                        <div className="col-sm-1 price">
+                        <div className="col-sm-1 col-2 price">
                           {item.price}
                         </div>
-                        <div className="col-sm-1 number">
+                        <div className="col-sm-1 col-2 number">
                           <span className="count">{item.number}</span>
                         </div>
-                        <div className="col-sm-2 total">
+                        <div className="col-sm-2 col-3 total">
                           {item.price * item.number}
                         </div>
                       </div>
@@ -100,9 +100,9 @@ export default class ListComponent extends React.Component {
                 })
               }
 
-              <div className="col-sm-5 offset-sm-7 counter">
+              <div className="col-sm-5 offset-sm-7 col-12 counter">
                 <span>Items: {numberCounter}</span>
-                <span>Total Price: {priceCounter} RMB</span>
+                <span>Total: ￥{priceCounter}</span>
               </div>
             </div>
           </div>

@@ -35,6 +35,7 @@ export const GET_PIZZA_DETAIL_SUCCESS = 'GET_PIZZA_DETAIL_SUCCESS';
 export const GET_PIZZA_DETAIL_FAILED = 'GET_PIZZA_DETAIL_FAILED';
 export function getPizzaDetail(id) {
   return dispatch => {
+    id = 1001; //for test
     axios.get(urlHelper.t('v1/pizza/' + id + '/detail')).then(response => {
       const { data: pizzaDetail } = response;
       dispatch({ type: GET_PIZZA_DETAIL_SUCCESS, pizzaDetail });

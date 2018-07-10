@@ -12,6 +12,7 @@ export class NavbarPage extends React.Component {
     return (
       <NavbarComponent
         userState={this.props.userState}
+        goLogin={this.props.userActions.goLogin}
         reloadAuth={this.props.userActions.reloadAuth}
         logout={this.props.userActions.logout}
         menuState={this.props.menuState}

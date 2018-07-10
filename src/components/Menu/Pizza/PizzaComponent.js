@@ -34,13 +34,13 @@ export default class PizzaComponent extends React.Component {
           this.props.menuState.pizzaMenu.map(pizzaList => {
             return (
               <div key={pizzaList.category} className="row">
-                <div className="col-12 category-name">
+                <div className="col-sm-12 category-name">
                   {pizzaList.category}
                 </div>
                 {
                   pizzaList.list.map(pizza => {
                     return (
-                      <div key={pizza.id} className="col-3">
+                      <div key={pizza.id} className="col-sm-3 col-6">
                         <div className="card item-box">
                           <img className="card-img-top" src={pizza.image} />
                           <div className="card-body">

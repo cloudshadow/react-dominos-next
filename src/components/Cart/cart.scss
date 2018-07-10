@@ -33,7 +33,6 @@
   }
   .item-wrapper {
     padding: 10px 0 10px 0;
-    height: 150px;
     border-bottom: 1px solid rgba(0,0,0,.2);
     .image {
       img {
@@ -48,8 +47,26 @@
     .addition{
       color: #777;
     }
-    .price, .number, .total {
-      text-align: center;
+    @media (min-width: 576px) {
+      .price, .number, .total {
+        text-align: center;
+      }
+      .option {
+        .delete {
+          font-size: .8rem;
+          color: #0076b3;
+          cursor: pointer;
+        }
+      }
+    }
+    @media (max-width: 575.98px) {
+      .option {
+        .delete {
+          font-size: 1rem;
+          color: #0076b3;
+          cursor: pointer;
+        }
+      }
     }
     .number {
       .oi {
@@ -74,33 +91,51 @@
     .default-topping, .addition-topping{
       font-size: .8rem;
     }
-    .option {
-      .delete {
-        font-size: .8rem;
-        color: #0076b3;
-        cursor: pointer;
+  }
+  @media (min-width: 576px) {
+    .order-wrapper {
+      margin-top: -1px;
+      .number-counter, .price-counter, .order {
+        background-color: #ccc;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.5rem;
+      }
+      .price-counter {
+        text-align: right;
+      }
+      .order{
+        background-color: #f14755;
+        a {
+          color:#fff;
+          text-decoration:none; 
+        } 
       }
     }
   }
-  .order-wrapper {
-    margin-top: -1px;
-    .number-counter, .price-counter, .order {
-      background-color: #ccc;
-      height: 50px;
-      line-height: 50px;
-      font-size: 1.5rem;
-    }
-    .price-counter {
-      text-align: right;
-    }
-    .order{
-      background-color: #f14755;
-      a {
-        color:#fff;
-        text-decoration:none; 
-      } 
+  @media (max-width: 575.98px) {
+    .order-wrapper {
+      margin-top: -1px;
+      .number-counter, .price-counter, .order {
+        background-color: #ccc;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.5rem;
+      }
+      .price-counter {
+        text-align: right;
+      }
+      .order{
+        background-color: #f14755;
+        text-align: center;
+        a {
+          color:#fff;
+          text-decoration:none; 
+        } 
+      }
     }
   }
+  
   .suggestion-wrapper{
     margin-top: 40px;
     .suggestion-title {

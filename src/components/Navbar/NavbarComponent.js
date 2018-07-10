@@ -10,6 +10,7 @@ export default class NavbarComponent extends React.Component {
     this.logo = require('../../assets/images/logo.png');
     this.state = {
       dropDownShow: false,
+      mobileMenuShow: false,
       current: window.location.pathname,
     };
   }
@@ -31,8 +32,18 @@ export default class NavbarComponent extends React.Component {
     });
   }
 
+  handleMobileMenuClick() {
+    this.setState({
+      mobileMenuShow: !this.state.mobileMenuShow
+    });
+  }
+
   handleSignOutClick() {
     this.props.logout();
+  }
+
+  handleGoLoginClick() {
+    this.props.goLogin('/member/home');
   }
 
   renderPage() {
@@ -42,11 +53,11 @@ export default class NavbarComponent extends React.Component {
           <img className="navbar-logo d-inline-block align-top" src={this.logo} />
           &nbsp;<span className="logo-text-red">Domino's</span> <span className="logo-text-blue">Pizza</span>
         </Link>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button className="navbar-toggler" type="button" onClick={this.handleMobileMenuClick.bind(this)} data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
         </button>
 
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div className={'collapse navbar-collapse ' + (this.state.mobileMenuShow ? 'show' : '')} id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className={this.state.current === '/' ? 'nav-item active' : 'nav-item'} onClick={this.activeMenu.bind(this, '/')}>
               <Link className="nav-link" to="/">Home</Link>
@@ -65,8 +76,8 @@ export default class NavbarComponent extends React.Component {
               <Link className="nav-link" to="/stores">Stores</Link>
             </li>
             */}
-            <li className={this.state.current === '/member' ? 'nav-item active' : 'nav-item'} onClick={this.activeMenu.bind(this, '/member')}>
-              <Link className="nav-link" to="/member">Member</Link>
+            <li className={this.state.current === '/member/home' ? 'nav-item active' : 'nav-item'} onClick={this.activeMenu.bind(this, '/member/home')}>
+              {this.props.userState.user ? <Link className="nav-link" to="/member/home">Member</Link> : <a href="javascript:;" className="nav-link" onClick={this.handleGoLoginClick.bind(this)}>Order</a>}
             </li>
           </ul>
           <ul className="navbar-nav">
@@ -84,7 +95,7 @@ export default class NavbarComponent extends React.Component {
                     {this.props.userState.user.name}
                   </a>
                   <div className={'dropdown-menu dropdown-menu-right ' + (this.state.dropDownShow ? 'show' : '')} onClick={this.handleDropDownClick.bind(this)} aria-labelledby="navbarDropdown">
-                    <Link className="dropdown-item" to="/member">Member</Link>
+                    <Link className="dropdown-item" to="/member/home">Member</Link>
                     <a className="dropdown-item" href="javascript:;" onClick={this.handleSignOutClick.bind(this)}>Sign Out</a>
                   </div>
                 </li>
@@ -112,6 +123,7 @@ NavbarComponent.propTypes = {
   userState: PropTypes.object.isRequired,
   cartState: PropTypes.object.isRequired,
   menuState: PropTypes.object.isRequired,
+  goLogin: PropTypes.func.isRequired,
   reloadAuth: PropTypes.func.isRequired,
   logout: PropTypes.func.isRequired,
   getPizzaOptions: PropTypes.func.isRequired,

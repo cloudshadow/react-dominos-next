@@ -29,13 +29,13 @@ export default class DessertComponent extends React.Component {
           this.props.menuState.dessertMenu.map(itemList => {
             return (
               <div key={itemList.category} className="row">
-                <div className="col-12 category-name">
+                <div className="col-sm-12 category-name">
                   {itemList.category}
                 </div>
                 {
                   itemList.list.map(item => {
                     return (
-                      <div key={item.id} className="col-3">
+                      <div key={item.id} className="col-sm-3 col-6">
                         <div className="card item-box">
                           <img className="card-img-top" src={item.image} />
                           <div className="card-body">

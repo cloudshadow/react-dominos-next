@@ -2,31 +2,33 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as memberActions from '../actions/memberActions';
+import * as userActions from '../actions/userActions';
 import MemberComponent from '../components/Member/MemberComponent';
 
 export class MemberPage extends React.Component {
   render() {
     return (
-      <MemberComponent />
+      <MemberComponent
+        userState={this.props.userState}
+      />
     );
   }
 }
 
 MemberPage.propTypes = {
-  memberActions: PropTypes.object.isRequired,
-  memberState: PropTypes.object.isRequired,
+  userActions: PropTypes.object.isRequired,
+  userState: PropTypes.object.isRequired,
 };
 
 function mapStateToProps(state) {
   return {
-    memberState: state.memberState,
+    userState: state.userState,
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    memberActions: bindActionCreators(memberActions, dispatch)
+    userActions: bindActionCreators(userActions, dispatch)
   };
 }
 

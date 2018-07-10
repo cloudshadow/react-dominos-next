@@ -8,7 +8,7 @@ export default class OrderComponent extends React.Component {
     super(props);
     this.props = props;
     this.state = {
-      model: 'carryout', //delivery
+      model: 'delivery', //delivery
       time: 'now',
       selectedAddress: null,
       deliveryTime: new Date().getTime() + 30 * 60 * 1000,
@@ -152,7 +152,7 @@ export default class OrderComponent extends React.Component {
                 this.state.time === 'now'
                   ?
                   <div className="col-sm-10 message">
-                    You will get your food before {(new Date(this.state.deliveryTime).getHours() + 1) + ':' + new Date(this.state.deliveryTime).getMinutes()}
+                    Get your food before {(new Date(this.state.deliveryTime).getHours() + 1) + ':' + new Date(this.state.deliveryTime).getMinutes()}
                   </div>
                   :
                   <div className="col-sm-10">

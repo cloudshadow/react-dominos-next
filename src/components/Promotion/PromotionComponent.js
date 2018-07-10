@@ -19,7 +19,7 @@ export default class PromotionComponent extends React.Component {
         {this.props.promotionState.promotions.map(promotion => {
           return (
             <div key={promotion.id} className="row">
-              <div className="col-12">
+              <div className="col-sm-12 col-12">
                 <div className="promotion-wrapper">
                   <div className="picture">
                     <img src={promotion.image} />
