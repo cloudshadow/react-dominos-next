@@ -77,7 +77,7 @@ export default class NavbarComponent extends React.Component {
             </li>
             */}
             <li className={this.state.current === '/member/home' ? 'nav-item active' : 'nav-item'} onClick={this.activeMenu.bind(this, '/member/home')}>
-              {this.props.userState.user ? <Link className="nav-link" to="/member/home">Member</Link> : <a href="javascript:;" className="nav-link" onClick={this.handleGoLoginClick.bind(this)}>Order</a>}
+              {this.props.userState.user ? <Link className="nav-link" to="/member/home">Member</Link> : <a href="javascript:;" className="nav-link" onClick={this.handleGoLoginClick.bind(this)}>Member</a>}
             </li>
           </ul>
           <ul className="navbar-nav">
