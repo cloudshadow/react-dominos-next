@@ -7,18 +7,19 @@
   left: 0;
   border-bottom: 1px solid rgba(200,200,200,.5);
   
+  // .menus-bg
   .menus-bg{
     position: fixed;
     z-index: 100;
     width: 100vw;
     height: 40px;
     left: 0;
-    filter: blur(10px);
+    // filter: blur(10px);
     // background: inherit; 
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, .8);
     // padding: 10px;
     text-align: center;
-    box-shadow: inset 0 0 0 200px rgba(255,255,255,0.3);
+    // box-shadow: inset 0 0 0 900px rgba(255,255,255,1);
   }
   .menus {
     position: fixed;

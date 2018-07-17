@@ -19,7 +19,7 @@ export default class PromotionComponent extends React.Component {
         {this.props.promotionState.promotions.map(promotion => {
           return (
             <div key={promotion.id} className="row">
-              <div className="col-sm-12 col-12">
+              <div className="col-sm-10 offset-sm-1 col-12">
                 <div className="promotion-wrapper">
                   <div className="picture">
                     <img src={promotion.image} />
@@ -46,7 +46,7 @@ export default class PromotionComponent extends React.Component {
 
   render() {
     return (
-      <div className="container promotion-container" >
+      <div className="container-fluid promotion-container" >
         {this.props.promotionState.promotions ? this.renderPage() : ''}
       </div>
     );
