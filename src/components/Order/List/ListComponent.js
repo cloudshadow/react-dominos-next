@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './list.scss';
 
-export default class ListComponent extends React.Component {
+export default class ListComponent extends React.PureComponent {
   constructor(props) {
     super(props);
     this.props = props;

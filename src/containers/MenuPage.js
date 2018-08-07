@@ -6,7 +6,7 @@ import * as menuActions from '../actions/menuActions';
 import * as cartActions from '../actions/cartActions';
 import MenuComponent from '../components/Menu/MenuComponent';
 
-export class MenuPage extends React.Component {
+export class MenuPage extends React.PureComponent {
   render() {
     return (
       <MenuComponent

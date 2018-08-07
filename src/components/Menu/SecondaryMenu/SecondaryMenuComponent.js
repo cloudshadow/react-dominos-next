@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './secondaryMenu.scss';
 
-export default class SecondaryMenuComponent extends React.Component {
+export default class SecondaryMenuComponent extends React.PureComponent {
   constructor(props) {
     super(props);
     this.props = props;

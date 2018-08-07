@@ -4,7 +4,7 @@ import objectAssign from 'object-assign';
 import MessageDialogComponent from '../../Shared/MessageDialog/MessageDialogComponent';
 import './drink.scss';
 
-export default class DrinkComponent extends React.Component {
+export default class DrinkComponent extends React.PureComponent {
   constructor(props) {
     super(props);
     this.props = props;

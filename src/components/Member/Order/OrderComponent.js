@@ -1,8 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import './order.scss';
 
-export default class OrderComponent extends React.Component {
+export default class OrderComponent extends React.PureComponent {
   constructor(props) {
     super(props);
     this.props = props;

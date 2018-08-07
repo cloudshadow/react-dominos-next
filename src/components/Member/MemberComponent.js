@@ -6,7 +6,7 @@ import CouponComponent from './Coupon/CouponComponent';
 import OrderComponent from './Order/OrderComponent';
 import './member.scss';
 
-export default class MemberComponent extends React.Component {
+export default class MemberComponent extends React.PureComponent {
   constructor(props) {
     super(props);
     this.props = props;

@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import * as homeActions from '../actions/homeActions';
 import HomeComponent from '../components/Home/HomeComponent';
 
-export class HomePage extends React.Component {
+export class HomePage extends React.PureComponent {
   render() {
     return (
       <HomeComponent

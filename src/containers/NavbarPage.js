@@ -7,7 +7,7 @@ import * as menuActions from '../actions/menuActions';
 import * as cartActions from '../actions/cartActions';
 import NavbarComponent from '../components/Navbar/NavbarComponent';
 
-export class NavbarPage extends React.Component {
+export class NavbarPage extends React.PureComponent {
   render() {
     return (
       <NavbarComponent

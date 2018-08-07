@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './messageDialog.scss';
 
-export default class MessageDialogComponent extends React.Component {
+export default class MessageDialogComponent extends React.PureComponent {
   constructor(props) {
     super(props);
     this.props = props;

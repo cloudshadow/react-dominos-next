@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import * as promotionActions from '../actions/promotionActions';
 import PromotionComponent from '../components/Promotion/PromotionComponent';
 
-export class PromotionPage extends React.Component {
+export class PromotionPage extends React.PureComponent {
   render() {
     return (
       <PromotionComponent getPromotions={this.props.promotionActions.getPromotions} promotionState={this.props.promotionState} />

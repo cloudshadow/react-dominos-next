@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import PizzaDialogComponent from '../../Shared/PizzaDialog/PizzaDialogComponent';
 import './pizza.scss';
 
-export default class PizzaComponent extends React.Component {
+export default class PizzaComponent extends React.PureComponent {
   constructor(props) {
     super(props);
     this.props = props;

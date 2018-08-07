@@ -11,7 +11,7 @@ import SoupComponent from './Soup/SoupComponent';
 import ComboComponent from './Combo/ComboComponent';
 import './menu.scss';
 
-export default class MenuComponent extends React.Component {
+export default class MenuComponent extends React.PureComponent {
   constructor(props) {
     super(props);
     this.props = props;

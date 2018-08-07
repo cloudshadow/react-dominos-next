@@ -7,7 +7,7 @@ import * as menuActions from '../actions/menuActions';
 import * as userActions from '../actions/userActions';
 import CartComponent from '../components/Cart/CartComponent';
 
-export class CartPage extends React.Component {
+export class CartPage extends React.PureComponent {
   render() {
     return (
       <CartComponent

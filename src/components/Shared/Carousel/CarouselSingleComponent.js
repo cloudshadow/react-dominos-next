@@ -6,7 +6,7 @@ import './slick.scss';
 import './slick-theme.scss';
 import './carousel.scss';
 
-export default class CarouselSingleComponent extends React.Component {
+export default class CarouselSingleComponent extends React.PureComponent {
   constructor(props) {
     super(props);
     this.props = props;

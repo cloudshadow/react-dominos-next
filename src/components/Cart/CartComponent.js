@@ -5,7 +5,7 @@ import CarouselMultipleComponent from '../Shared/Carousel/CarouselMultipleCompon
 import objectAssign from 'object-assign';
 import './cart.scss';
 
-export default class CartComponent extends React.Component {
+export default class CartComponent extends React.PureComponent {
   constructor(props) {
     super(props);
     this.props = props;

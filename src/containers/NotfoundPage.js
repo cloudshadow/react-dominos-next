@@ -1,11 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as notfoundActions from '../actions/notfoundActions';
 import NotfoundComponent from '../components/Notfound/NotfoundComponent';
 
-export class NotfoundPage extends React.Component {
+export class NotfoundPage extends React.PureComponent {
   render() {
     return (
       <NotfoundComponent />

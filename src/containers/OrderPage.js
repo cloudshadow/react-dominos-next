@@ -6,7 +6,7 @@ import * as cartActions from '../actions/cartActions';
 import * as userActions from '../actions/userActions';
 import OrderComponent from '../components/Order/OrderComponent';
 
-export class OrderPage extends React.Component {
+export class OrderPage extends React.PureComponent {
   render() {
     return (
       <div>

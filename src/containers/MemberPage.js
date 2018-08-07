@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import * as userActions from '../actions/userActions';
 import MemberComponent from '../components/Member/MemberComponent';
 
-export class MemberPage extends React.Component {
+export class MemberPage extends React.PureComponent {
   render() {
     return (
       <MemberComponent

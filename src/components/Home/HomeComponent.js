@@ -4,7 +4,7 @@ import Carousel from '../Shared/Carousel/CarouselSingleComponent';
 import Events from './Events/EventsComponent';
 import './home.scss';
 
-export default class HomeComponent extends React.Component {
+export default class HomeComponent extends React.PureComponent {
   constructor(props) {
     super(props);
     this.props = props;

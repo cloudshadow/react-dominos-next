@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import objectAssign from 'object-assign';
 import './pizzaDialog.scss';
 
-export default class PizzaDialogComponent extends React.Component {
+export default class PizzaDialogComponent extends React.PureComponent {
   constructor(props) {
     super(props);
     this.props = props;

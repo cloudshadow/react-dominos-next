@@ -2,7 +2,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import './footer.scss';
 
-export default class FooterComponent extends React.Component {
+export default class FooterComponent extends React.PureComponent {
   constructor(props) {
     super(props);
     this.props = props;

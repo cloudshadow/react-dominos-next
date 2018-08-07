@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import * as userActions from '../actions/userActions';
 import LoginComponent from '../components/Login/LoginComponent';
 
-export class LoginPage extends React.Component {
+export class LoginPage extends React.PureComponent {
   render() {
     return (
       <LoginComponent

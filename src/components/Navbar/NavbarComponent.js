@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import './navbar.scss';
 
-export default class NavbarComponent extends React.Component {
+export default class NavbarComponent extends React.PureComponent {
   constructor(props) {
     super(props);
     this.props = props;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import './promotion.scss';
 
-export default class PromotionComponent extends React.Component {
+export default class PromotionComponent extends React.PureComponent {
   constructor(props) {
     super(props);
     this.props = props;
