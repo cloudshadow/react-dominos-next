@@ -42,7 +42,7 @@ export default class PizzaComponent extends React.PureComponent {
                     return (
                       <div key={pizza.id} className="col-sm-3 col-6">
                         <div className="card item-box">
-                          <img className="card-img-top" src={pizza.image} />
+                          <img className="card-img-top" src={pizza.image} alt={pizza.image} />
                           <div className="card-body">
                             <h5 className="card-title">{pizza.name}</h5>
                             <div className="card-text promo-text">{pizza.promotionInfo ? <span>{pizza.promotionInfo}</span> : ''}</div>

@@ -37,7 +37,7 @@ export default class RiceComponent extends React.PureComponent {
                     return (
                       <div key={item.id} className="col-sm-3 col-6">
                         <div className="card item-box">
-                          <img className="card-img-top" src={item.image} />
+                          <img className="card-img-top" src={item.image} alt={item.image} />
                           <div className="card-body">
                             <h5 className="card-title">{item.name}</h5>
                             <div className="card-text promo-text">{item.promotionInfo ? <span>{item.promotionInfo}</span> : ''}</div>
@@ -75,6 +75,6 @@ RiceComponent.propTypes = {
   menuState: PropTypes.object.isRequired,
   cartState: PropTypes.object.isRequired,
   hideMessageDialog: PropTypes.func.isRequired,
-  getDrinkMenu: PropTypes.func.isRequired,
   addItem: PropTypes.func.isRequired,
+  getRiceMenu: PropTypes.func.isRequired,
 };

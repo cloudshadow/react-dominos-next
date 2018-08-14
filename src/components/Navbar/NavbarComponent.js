@@ -50,7 +50,7 @@ export default class NavbarComponent extends React.PureComponent {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <Link className="navbar-brand" to="/">
-          <img className="navbar-logo d-inline-block align-top" src={this.logo} />
+          <img className="navbar-logo d-inline-block align-top" src={this.logo} alt={this.logo} />
           &nbsp;<span className="logo-text-red">Domino's</span> <span className="logo-text-blue">Pizza</span>
         </Link>
         <button className="navbar-toggler" type="button" onClick={this.handleMobileMenuClick.bind(this)} data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

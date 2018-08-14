@@ -16,7 +16,7 @@ export default class EventsComponent extends React.PureComponent {
           {this.props.eventImages.map(item =>
             <div className="col-sm-3 col-12 event" key={item.id}>
               <Link to={item.link}>
-                <img src={item.url} />
+                <img src={item.url} alt={item.url} />
               </Link>
             </div>
           )}

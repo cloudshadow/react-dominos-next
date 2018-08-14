@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
-import SecondaryMenuComponent from './SecondaryMenu/SecondaryMenuComponent'
+import SecondaryMenuComponent from './SecondaryMenu/SecondaryMenuComponent';
 import PizzaComponent from './Pizza/PizzaComponent';
 import RiceComponent from './Rice/RiceComponent';
 import SideComponent from './Side/SideComponent';
@@ -11,7 +11,7 @@ import SoupComponent from './Soup/SoupComponent';
 import ComboComponent from './Combo/ComboComponent';
 import './menu.scss';
 
-export default class MenuComponent extends React.PureComponent {
+export default class MenuComponent extends React.Component {
   constructor(props) {
     super(props);
     this.props = props;

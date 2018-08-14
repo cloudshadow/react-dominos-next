@@ -11,7 +11,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'), // Note: Physical files are only output by the production build task `npm run build`.
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   plugins: [
     new HtmlWebpackPlugin({     // Create HTML file that includes references to bundled CSS and JS.
@@ -71,6 +71,7 @@ module.exports = {
   resolve: {
     extensions: ['*', '.js', '.jsx']
   },
+  devtool: 'source-map',
   devServer: {
     contentBase: path.join(__dirname, "src"),
     inline: true,
@@ -79,7 +80,6 @@ module.exports = {
     progress: true,
     open: true,
     hot: true, //see more https://github.com/webpack/webpack/issues/1151
-    // host: '172.19.100.19',
     watchContentBase: true,
     historyApiFallback: true,
   }

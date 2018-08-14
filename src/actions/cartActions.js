@@ -8,7 +8,6 @@ export const GET_CART_FAILED = 'GET_CART_FAILED';
 export function getCart() {
   return dispatch => {
     axios.get(urlHelper.t('v1/cartitems')).then(response => {
-
       // ==============code for test begin==============
       let items = JSON.parse(localStorage.getItem('cart'));
       dispatch({ type: DELETE_ITEM_SUCCESS, items });

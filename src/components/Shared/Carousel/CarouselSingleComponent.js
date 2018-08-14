@@ -34,7 +34,7 @@ export default class CarouselSingleComponent extends React.PureComponent {
     return (
       <Slider {...this.settings}>
         {this.props.sliderImages.map(
-          item => <div className="slider-item" key={item.id}><Link to={item.link} ><img className="slider-image" src={item.url} /></Link></div>
+          item => <div className="slider-item" key={item.id}><Link to={item.link} ><img className="slider-image" src={item.url} alt={item.url} /></Link></div>
         )}
       </Slider>
     );

@@ -37,7 +37,7 @@ export default class SoupComponent extends React.PureComponent {
                     return (
                       <div key={item.id} className="col-sm-3 col-6">
                         <div className="card item-box">
-                          <img className="card-img-top" src={item.image} />
+                          <img className="card-img-top" src={item.image} alt={item.image} />
                           <div className="card-body">
                             <h5 className="card-title">{item.name}</h5>
                             <div className="card-text promo-text">{item.promotionInfo ? <span>{item.promotionInfo}</span> : ''}</div>

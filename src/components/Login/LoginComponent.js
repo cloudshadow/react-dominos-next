@@ -15,7 +15,6 @@ export default class LoginComponent extends React.PureComponent {
   }
 
   componentDidMount() {
-    console.log(this.props.userState.previousPath)
   }
 
   handleTabClick(model) {

@@ -1,14 +1,8 @@
-// .carousel{
-//   color: red;
-// }
-// .slider-image{
-//   // width: 100vw;
-// }
-
 .slider-item {
   cursor: pointer;
   .slider-image {
-    width: 100%;
+    // width: 100%;
+    min-height: 400px;
   }
 }
 

@@ -28,7 +28,7 @@ export default class CarouselComponent extends React.PureComponent {
         {this.props.suggestionItems.map(
           item =>
             <div className="slider-mutil-item" key={item.id}>
-              <img className="slider-image" src={item.image} />
+              <img className="slider-image" src={item.image} alter={item.image} />
               <button className="slider-btn">Add to Cart</button>
             </div>
         )}
