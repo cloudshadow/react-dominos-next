@@ -12,10 +12,10 @@ export default class ErrorBoundaryComponent extends React.Component {
     this.setState({ hasError: true });
     // You can also log the error to an error reporting service
     // logErrorToMyService(error, info);
-    console.log(1)
-    console.log(error)
-    console.log(2)
-    console.log(info)
+    // console.log(1)
+    // console.log(error)
+    // console.log(2)
+    // console.log(info)
   }
 
   render() {

@@ -6,6 +6,9 @@
 ## Demo
   Demo will release on [here](http://dominos.cloudshadow.me)
 
+## Performance compare with www.dominos.com.cn
+[PerformanceCompare.pptx](https://github.com/cloudshadow/react-dominos-next/files/2289561/Performance.pptx)
+
 ## Function
 | Function        | Status        | Remark
 | --------------- | ------------- | ------------------- |
