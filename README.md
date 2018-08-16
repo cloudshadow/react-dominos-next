@@ -1,7 +1,7 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/1182967/34776160-d0cdee06-f650-11e7-8119-b42c0c324e8f.png"/></p>
 
 # Domino's Online Order (Web Version)
-  > This is a new version online order system for domino's pizza china.
+  > This is a online order system Demo for domino's pizza china.
 
 ## Demo
   Demo will release on [here](http://dominos.cloudshadow.me)
@@ -25,8 +25,9 @@
 | Sign In         | Finished      |
 | Sign Up         | Part      | Finished UI 
 | Sign Out        | Finished      |
-| Cart            | Part      | Remaning add suggestion functon
-| Order           | Part      | Remaning check user login
+| Cart            | Finished      | 
+| Order           | Finished      | 
+| Error Monitor   | TBD      | 
 
 ## Libraries
   * [React v16](https://reactjs.org/)
