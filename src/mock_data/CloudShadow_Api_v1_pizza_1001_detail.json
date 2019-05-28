@@ -2,7 +2,7 @@
   "id": 1001,
   "name": "照烧风味牛肉土豆比萨",
   "type": "pizza",
-  "image": "http://static-test.dominos.com.cn/000/event.jpg",
+  "image": "http://cdn-test.dominos.com.cn/000/event.jpg",
   "desc": "甄选牛肉，香浓蛋黄风味酱，美国进口酥香薯角，经典升级！配料：照烧风味牛肉、培根、薯角、青豆、芝味酱、芝士",
   "promotionInfo": "自取买一送一",
   "sizes": [
@@ -12,7 +12,7 @@
   "msize": {
     "basePrice": 59,
     "name": "9寸",
-    "image": "http://static-test.dominos.com.cn/000/size.png",
+    "image": "http://cdn-test.dominos.com.cn/000/size.png",
     "crusts": [ "jdsp", "qqbc", "sxkp", "zsjb", "zxjb" ],
     "sources": [ "xndh", "bbq", "jdfq" ],
     "toppings": [ 
@@ -44,7 +44,7 @@
   "lsize": {
     "basePrice": 85,
     "name": "12寸",
-    "image": "http://static-test.dominos.com.cn/000/size.png",
+    "image": "http://cdn-test.dominos.com.cn/000/size.png",
     "crusts": [ "jdsp", "qqbc", "sxkp", "zsjb", "zxjb" ],
     "sources": [ "xndh", "bbq", "jdfq" ],
     "toppings": [ 

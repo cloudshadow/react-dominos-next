@@ -6,7 +6,7 @@
         "id": 5001,
         "name": "百香果芒果饮",
         "type": "drink",
-        "image": "http://static-test.dominos.com.cn/000/drink1.jpg",
+        "image": "http://cdn-test.dominos.com.cn/000/drink1.jpg",
         "promotionInfo": "",
         "originPrice": 10
       },
@@ -14,7 +14,7 @@
         "id": 5002,
         "name": "甘蔗马蹄饮",
         "type": "drink",
-        "image": "http://static-test.dominos.com.cn/000/drink1.jpg",
+        "image": "http://cdn-test.dominos.com.cn/000/drink1.jpg",
         "promotionInfo": "20% Off",
         "originPrice": 10,
         "promoPrice": 8
@@ -23,7 +23,7 @@
         "id": 5003,
         "name": "卡曼橘红茶风味饮",
         "type": "drink",
-        "image": "http://static-test.dominos.com.cn/000/drink1.jpg",
+        "image": "http://cdn-test.dominos.com.cn/000/drink1.jpg",
         "promotionInfo": "",
         "originPrice": 10
       },
@@ -31,7 +31,7 @@
         "id": 5004,
         "name": "柠檬味乳酸菌饮",
         "type": "drink",
-        "image": "http://static-test.dominos.com.cn/000/drink2.jpg",
+        "image": "http://cdn-test.dominos.com.cn/000/drink2.jpg",
         "promotionInfo": "",
         "originPrice": 10
       },
@@ -39,7 +39,7 @@
         "id": 5005,
         "name": "可口可乐(1.25L)",
         "type": "drink",
-        "image": "http://static-test.dominos.com.cn/000/drink2.jpg",
+        "image": "http://cdn-test.dominos.com.cn/000/drink2.jpg",
         "promotionInfo": "",
         "originPrice": 10
       }

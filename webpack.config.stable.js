@@ -13,7 +13,7 @@ module.exports = {
   ],
   output: {
     path: path.resolve(__dirname, 'dist-stable/' + folderName + '/'),
-    publicPath: 'http://static-test.dominos.com.cn/' + folderName + '/',
+    publicPath: 'http://cdn-test.dominos.com.cn/' + folderName + '/',
     filename: '[name].[contenthash].js'
   },
   plugins: [

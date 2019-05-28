@@ -21,7 +21,7 @@ export default class MemberComponent extends React.PureComponent {
       <div className="row">
         <div className="col-sm-12">
           <div className="avatar">
-            <img src="http://static-test.dominos.com.cn/000/avatar1.jpg" />
+            <img src="http://cdn-test.dominos.com.cn/000/avatar1.jpg" />
           </div>
           <div className="name">
             {this.props.userState.user.name}

@@ -2,49 +2,49 @@
   "sliderImages": [
     {
       "id": 1,
-      "url": "http://static-test.dominos.com.cn/000/pizza1.jpg",
+      "url": "http://cdn-test.dominos.com.cn/000/pizza1.jpg",
       "link": "/menu/pizza"
     },
     {
       "id": 2,
-      "url": "http://static-test.dominos.com.cn/000/pizza1.jpg",
+      "url": "http://cdn-test.dominos.com.cn/000/pizza1.jpg",
       "link": "/menu/pizza"
     },
     {
       "id": 3,
-      "url": "http://static-test.dominos.com.cn/000/pizza1.jpg",
+      "url": "http://cdn-test.dominos.com.cn/000/pizza1.jpg",
       "link": "/menu/pizza"
     },
     {
       "id": 4,
-      "url": "http://static-test.dominos.com.cn/000/pizza1.jpg",
+      "url": "http://cdn-test.dominos.com.cn/000/pizza1.jpg",
       "link": "/menu/pizza"
     },
     {
       "id": 5,
-      "url": "http://static-test.dominos.com.cn/000/pizza1.jpg",
+      "url": "http://cdn-test.dominos.com.cn/000/pizza1.jpg",
       "link": "/menu/pizza"
     }
   ],
   "eventImages": [
     {
       "id": 1,
-      "url": "http://static-test.dominos.com.cn/000/event.jpg",
+      "url": "http://cdn-test.dominos.com.cn/000/event.jpg",
       "link": "/menu/pizza"
     },
     {
       "id": 2,
-      "url": "http://static-test.dominos.com.cn/000/event.jpg",
+      "url": "http://cdn-test.dominos.com.cn/000/event.jpg",
       "link": "/promotion"
     },
     {
       "id": 3,
-      "url": "http://static-test.dominos.com.cn/000/event.jpg",
+      "url": "http://cdn-test.dominos.com.cn/000/event.jpg",
       "link": "/stores"
     },
     {
       "id": 4,
-      "url": "http://static-test.dominos.com.cn/000/event.jpg",
+      "url": "http://cdn-test.dominos.com.cn/000/event.jpg",
       "link": "/member"
     }
   ]

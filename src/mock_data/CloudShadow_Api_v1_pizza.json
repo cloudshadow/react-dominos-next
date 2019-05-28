@@ -5,7 +5,7 @@
       {
         "id": 1001,
         "name": "照烧风味牛肉土豆比萨",
-        "image": "http://static-test.dominos.com.cn/000/event.jpg",
+        "image": "http://cdn-test.dominos.com.cn/000/event.jpg",
         "promotionInfo": "自取买一送一",
         "nineInchOriginPrice": 59,
         "nineInchPromoPrice": 41,
@@ -15,7 +15,7 @@
       {
         "id": 1002,
         "name": "BBQ猪颈肉比萨",
-        "image": "http://static-test.dominos.com.cn/000/event.jpg",
+        "image": "http://cdn-test.dominos.com.cn/000/event.jpg",
         "promotionInfo": "自取买一送一",
         "nineInchOriginPrice": 59,
         "nineInchPromoPrice": 41,
@@ -25,7 +25,7 @@
       {
         "id": 1003,
         "name": "德式喷香猪肘比萨",
-        "image": "http://static-test.dominos.com.cn/000/event.jpg",
+        "image": "http://cdn-test.dominos.com.cn/000/event.jpg",
         "promotionInfo": "自取买一送一",
         "nineInchOriginPrice": 59,
         "nineInchPromoPrice": 41,
@@ -35,7 +35,7 @@
       {
         "id": 1004,
         "name": "香烤羊肉比萨",
-        "image": "http://static-test.dominos.com.cn/000/event.jpg",
+        "image": "http://cdn-test.dominos.com.cn/000/event.jpg",
         "promotionInfo": "自取买一送一",
         "nineInchOriginPrice": 59,
         "nineInchPromoPrice": 41,
@@ -50,7 +50,7 @@
       {
         "id": 1011,
         "name": "大吉大利比萨",
-        "image": "http://static-test.dominos.com.cn/000/event.jpg",
+        "image": "http://cdn-test.dominos.com.cn/000/event.jpg",
         "promotionInfo": "自取买一送一",
         "nineInchOriginPrice": 69,
         "nineInchPromoPrice": 48,
@@ -60,7 +60,7 @@
       {
         "id": 1012,
         "name": "尊享牛油果芝士鸡比萨",
-        "image": "http://static-test.dominos.com.cn/000/event.jpg",
+        "image": "http://cdn-test.dominos.com.cn/000/event.jpg",
         "promotionInfo": "自取买一送一",
         "nineInchOriginPrice": 69,
         "nineInchPromoPrice": 48,
@@ -70,7 +70,7 @@
       {
         "id": 1013,
         "name": "照烧风味章鱼虾仁比萨",
-        "image": "http://static-test.dominos.com.cn/000/event.jpg",
+        "image": "http://cdn-test.dominos.com.cn/000/event.jpg",
         "promotionInfo": "自取买一送一",
         "nineInchOriginPrice": 69,
         "nineInchPromoPrice": 48,
@@ -80,7 +80,7 @@
       {
         "id": 1014,
         "name": "黑松露风味牛肉比萨",
-        "image": "http://static-test.dominos.com.cn/000/event.jpg",
+        "image": "http://cdn-test.dominos.com.cn/000/event.jpg",
         "promotionInfo": "自取买一送一",
         "nineInchOriginPrice": 69,
         "nineInchPromoPrice": 48,
@@ -95,7 +95,7 @@
       {
         "id": 1021,
         "name": "酥香嫩鱼比萨",
-        "image": "http://static-test.dominos.com.cn/000/event.jpg",
+        "image": "http://cdn-test.dominos.com.cn/000/event.jpg",
         "promotionInfo": "自取买一送一",
         "nineInchOriginPrice": 45,
         "nineInchPromoPrice": 31,
@@ -105,7 +105,7 @@
       {
         "id": 1022,
         "name": "浓香脆鸡菠萝比萨",
-        "image": "http://static-test.dominos.com.cn/000/event.jpg",
+        "image": "http://cdn-test.dominos.com.cn/000/event.jpg",
         "promotionInfo": "自取买一送一",
         "nineInchOriginPrice": 45,
         "nineInchPromoPrice": 31,
@@ -115,7 +115,7 @@
       {
         "id": 1023,
         "name": "浓香芝士比萨",
-        "image": "http://static-test.dominos.com.cn/000/event.jpg",
+        "image": "http://cdn-test.dominos.com.cn/000/event.jpg",
         "promotionInfo": "自取买一送一",
         "nineInchOriginPrice": 45,
         "nineInchPromoPrice": 31,
@@ -125,7 +125,7 @@
       {
         "id": 1024,
         "name": "美国风情土豆培根比萨",
-        "image": "http://static-test.dominos.com.cn/000/event.jpg",
+        "image": "http://cdn-test.dominos.com.cn/000/event.jpg",
         "promotionInfo": "自取买一送一",
         "nineInchOriginPrice": 45,
         "nineInchPromoPrice": 31,

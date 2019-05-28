@@ -152,7 +152,7 @@ export default class CartComponent extends React.PureComponent {
           Cart is empty.
         </div>
         <div className="col-sm-4 offset-sm-4">
-          <img className="empty-cart" src="http://static-test.dominos.com.cn/000/empty.png" />
+          <img className="empty-cart" src="http://cdn-test.dominos.com.cn/000/empty.png" />
         </div>
 
       </div>
