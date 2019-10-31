@@ -67,7 +67,7 @@
     "mini-css-extract-plugin": "^0.4.0",
     "node-sass": "^4.0.0",
     "npm-run-all": "3.1.2",
-    "open": "0.0.5",
+    "open": "6.0.0",
     "postcss-loader": "^2.1.2",
     "prompt": "1.0.0",
     "react-addons-test-utils": "15.4.1",
