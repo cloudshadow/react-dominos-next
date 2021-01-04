@@ -20,7 +20,7 @@
   "author": "CloudShadow.Me",
   "license": "MIT",
   "dependencies": {
-    "axios": "0.15.3",
+    "axios": "0.21.1",
     "es6-promise": "4.1.0",
     "history": "^4.7.2",
     "object-assign": "4.1.0",
